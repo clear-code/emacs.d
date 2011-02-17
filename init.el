@@ -12,7 +12,7 @@
 
 
 ;;; キーバインド
-;; キーバインド
+;; 基本
 (define-key global-map (kbd "C-h") 'delete-backward-char) ; 削除
 (define-key global-map (kbd "M-?") 'help-for-help)        ; ヘルプ
 (define-key global-map (kbd "C-z") 'undo)                 ; undo
@@ -21,6 +21,10 @@
 (define-key global-map (kbd "C-c ;") 'comment-dwim)       ; コメントアウト
 (define-key global-map (kbd "M-C-g") 'grep)               ; grep
 (define-key global-map (kbd "C-[ M-C-g") 'goto-line)      ; 指定行へ移動
+;; ウィンドウ移動
+;; 2011-02-17
+(define-key global-map (kbd "C-M-n") 'next-multiframe-window)
+(define-key global-map (kbd "C-M-p") 'previous-multiframe-window)
 
 
 ;;; grep
