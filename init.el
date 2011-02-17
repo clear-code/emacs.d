@@ -21,6 +21,13 @@
 
 
 ;;; 再帰的にgrep
+(require 'grep)
+(defun grep-default-command ()
+  (cons (concat "grep -nH -r -e "
+                (shell-quote-argument (grep-tag-default))
+                " *."
+                (file-name-extension buffer-file-name))
+        16))
 (setq grep-command '("grep -nH -r -e  ." . 16))
 
 
