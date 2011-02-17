@@ -1,3 +1,5 @@
+;;; バージョン管理システム
+;; diredから適切なバージョン管理システムの*-statusを起動
 (defun dired-vc-status (&rest args)
   (interactive)
   (cond ((file-exists-p (concat (dired-current-directory) ".svn"))
@@ -6,5 +8,4 @@
          (magit-status (dired-current-directory)))
         (t
          (message "version controlled?"))))
-
 (define-key dired-mode-map "V" 'dired-vc-status)

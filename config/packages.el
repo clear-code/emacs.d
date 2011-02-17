@@ -1,3 +1,5 @@
+;;; パッケージ管理システム
+
 (require 'cl)
 
 (defvar package-base-dir "~/.emacs.d/packages")
@@ -78,15 +80,17 @@
        (funcall install-proc files)))
     (require require-name)))
 
-
-;;; *grep*で編集できるようにする
+
+;;; grep-edit
+;; *grep*で編集できるようにする
 (package-install 'emacswiki "grep-edit.el" 'grep-edit)
 (add-hook 'grep-setup-hook
           (lambda ()
             (define-key grep-mode-map (kbd "C-c C-c") 'grep-edit-finish-edit)))
 
-
-;;; 自動補完
+
+;;; Auto Complete
+;; 自動補完
 (package-install 'github "m2ym/auto-complete" 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories
              (format "%s/auto-complete/dict" package-base-dir))
@@ -96,8 +100,9 @@
             (define-key ac-completing-map (kbd "C-n") 'ac-next)
             (define-key ac-completing-map (kbd "C-p") 'ac-previous)))
 
-
+
 ;;; Anything
+;; iswitchbの代わり
 (let ((original-browse-url-browser-function browse-url-browser-function))
   (setq anything-command-map-prefix-key "C-c C-<SPC>")
   (package-install 'repo.or.cz '((files . ("anything-config"))
@@ -111,8 +116,9 @@
   (define-key anything-map (kbd "C-M-p") 'anything-previous-source)
   (setq browse-url-browser-function original-browse-url-browser-function))
 
-
-;;; テスト実行
+
+;;; run-test
+;; テスト実行
 (package-install 'github '((files . ("kou/run-test"))
                            (base-path . "lib"))
                  'run-test-setting)
