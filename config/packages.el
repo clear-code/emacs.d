@@ -58,9 +58,9 @@
         (install-proc (case type
                         (emacswiki
                          'package-install-from-emacswiki)
-                        ('github
+                        (github
                          'package-install-from-github)
-                        ('repo.or.cz
+                        (repo.or.cz
                          'package-install-from-repo.or.cz)
                         (t
                          (error "unknown package type: <%s>(%s)"
