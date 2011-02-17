@@ -25,6 +25,7 @@
 
 ;;; grep
 ;; 再帰的にgrep
+;; 2011-02-17
 (require 'grep)
 (defun grep-default-command ()
   (cons (concat "grep -nH -r -e "
