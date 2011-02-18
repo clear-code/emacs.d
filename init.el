@@ -29,15 +29,23 @@
 
 ;;; grep
 ;; 再帰的にgrep
-;; 2011-02-17
+;; 2011-02-18
 (require 'grep)
+(setq grep-command-before-query "grep -nH -r -e ")
 (defun grep-default-command ()
-  (cons (concat "grep -nH -r -e "
-                (shell-quote-argument (grep-tag-default))
-                " *."
-                (file-name-extension buffer-file-name))
-        16))
-(setq grep-command '("grep -nH -r -e  ." . 16))
+  (if current-prefix-arg
+      (let ((grep-command-before-target
+             (concat grep-command-before-query
+                     (shell-quote-argument (grep-tag-default)))))
+        (cons (if buffer-file-name
+                  (concat grep-command-before-target
+                          " *."
+                          (file-name-extension buffer-file-name))
+                (concat grep-command-before-target " ."))
+              (+ (length grep-command-before-target) 1)))
+    (car grep-command)))
+(setq grep-command (cons (concat grep-command-before-query " .")
+                         (+ (length grep-command-before-query) 1)))
 
 
 ;;; 画像
