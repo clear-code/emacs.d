@@ -1,4 +1,5 @@
 ;;; パッケージ管理システム
+;; 2011-03-02
 
 (require 'cl)
 
@@ -16,8 +17,7 @@
   (shell-command command))
 
 (defun package-install-from-emacswiki (files)
-  (shell-command
-   (format "mkdir -p %s" (package-directory files)))
+  (make-directory (package-directory files) t)
   (package-run-shell-command
    (format "wget --directory-prefix %s %s"
            (package-directory files)
