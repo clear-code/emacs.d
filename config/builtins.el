@@ -10,6 +10,13 @@
          (message "version controlled?"))))
 (define-key dired-mode-map "V" 'dired-vc-status)
 
+
 ;;; 警告
 ;; 2011-03-01
 (require 'warnings)
+
+
+;;; スペルチェック
+;; 2011-03-09
+(setq-default flyspell-mode t)
+(setq ispell-dictionary "american")
