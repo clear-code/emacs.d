@@ -157,6 +157,14 @@
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 
 
+;;; リージョンの大文字小文字変換を有効にする。
+;; C-x C-u -> upcase
+;; C-x C-l -> downcase
+;; 2011-03-09
+(put 'upcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
+
+
 ;;; 追加の設定
 ;; 標準Elispの設定
 (load "config/builtins")
