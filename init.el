@@ -165,6 +165,12 @@
 (put 'downcase-region 'disabled nil)
 
 
+;;; Emacsサーバー
+;; emacsclientで接続できるようにする。
+;; 2011-06-14
+(server-start)
+
+
 ;;; 追加の設定
 ;; 標準Elispの設定
 (load "config/builtins")
