@@ -41,3 +41,8 @@
 (package-install 'github '((files . ("kou/run-test"))
                            (base-path . "lib"))
                  'run-test-setting)
+
+
+;;; uim
+;; 2011-06-27
+(load "config/packages/uim")
