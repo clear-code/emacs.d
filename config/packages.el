@@ -25,7 +25,7 @@
 (let ((original-browse-url-browser-function browse-url-browser-function))
   (setq anything-command-map-prefix-key "C-c C-<SPC>")
   (package-install 'repo.or.cz '((files . ("anything-config"))
-                                 (additional-paths . ("extensions")))
+                                 (additional-paths . ("extensions" "contrib")))
                    'anything-startup)
   (define-key global-map (kbd "C-x b") 'anything-for-files)
   (define-key anything-map (kbd "C-z") nil)
