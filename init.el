@@ -188,3 +188,8 @@
 (load "config/builtins")
 ;; 非標準Elispの設定
 (load "config/packages")
+;; 個別の設定があったら読み込む
+;; 2012-02-15
+(condition-case err
+    (load "config/local")
+  (error))
