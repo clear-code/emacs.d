@@ -18,6 +18,8 @@
 (add-to-list 'el-get-recipie-path
              "~/.emacs.d/config/el-get/local-recipes")
 
+(defvar packages '()
+  "List of package names to be installed")
 
 ;;; grep-edit
 ;; *grep*で編集できるようにする
@@ -73,3 +75,7 @@
 (condition-case err
     (load "config/packages/local")
   (error))
+
+;;; パッケージをインストール
+;; 2012-03-15
+(el-get 'sync packages)
