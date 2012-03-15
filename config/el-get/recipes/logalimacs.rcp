@@ -1,0 +1,4 @@
+(:name run-test
+       :type git
+       :url "https://github.com/logaling/logalimacs.git"
+       :features (logalimacs))
