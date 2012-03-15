@@ -15,7 +15,6 @@
 (add-to-list 'el-get-recipe-path
              "~/.emacs.d/config/el-get/local-recipes")
 
-(require 'package)
 
 ;;; grep-edit
 ;; *grep*で編集できるようにする
