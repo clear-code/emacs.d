@@ -1,4 +1,5 @@
 ;;; el-get
+;; 複数のソースからパッケージをインストールできるパッケージ管理システム
 ;; 2012-03-15
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (unless (require 'el-get nil t)
@@ -10,6 +11,13 @@
 
 
 (require 'package)
+;; レシピ置き場
+(add-to-list 'el-get-recipie-path
+             "~/.emacs.d/config/el-get/recipes")
+;; 追加のレシピ置き場
+(add-to-list 'el-get-recipie-path
+             "~/.emacs.d/config/el-get/local-recipes")
+
 
 ;;; grep-edit
 ;; *grep*で編集できるようにする
