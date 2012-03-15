@@ -56,9 +56,7 @@
 
 ;;; run-test
 ;; テスト実行
-(package-install 'github '((files . ("kou/run-test"))
-                           (base-path . "lib"))
-                 'run-test-setting)
+(el-get 'sync '(run-test))
 
 
 ;;; uim
