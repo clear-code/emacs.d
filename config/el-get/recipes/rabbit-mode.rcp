@@ -3,6 +3,6 @@
        :url "https://github.com/shockers/rabbit.git"
        :load-path ("misc/emacs")
        :after (lambda ()
-                ((autoload 'rabbit-mode "rabbit-mode" "major mode for Rabbit" t)
-                 (add-to-list 'auto-mode-alist
-                              '("\\.\\(rbt\\|rab\\)$" . rabbit-mode)))))
+                (autoload 'rabbit-mode "rabbit-mode" "major mode for Rabbit" t)
+                (add-to-list 'auto-mode-alist
+                             '("\\.\\(rbt\\|rab\\)$" . rabbit-mode))))
