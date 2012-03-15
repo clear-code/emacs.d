@@ -51,6 +51,13 @@
   (setq browse-url-browser-function original-browse-url-browser-function))
 
 
+;;; ruby-mode
+;; Emacsにバンドルされているruby-modeは古いのでRubyのリポジ
+;; トリに入っているものを使う。
+;; 2012-03-15
+(el-get 'sync '(ruby-mode-trunk))
+
+
 ;;; run-test
 ;; テスト実行
 (el-get 'sync '(run-test))
