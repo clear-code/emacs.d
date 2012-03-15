@@ -41,10 +41,10 @@
 ;;; Anything
 ;; iswitchbの代わり
 (let ((original-browse-url-browser-function browse-url-browser-function))
-  (setq anything-command-map-prefix-key "C-c C-<SPC>")
-  (package-install 'repo.or.cz '((files . ("anything-config"))
-                                 (additional-paths . ("extensions" "contrib")))
-                   'anything-startup)
+  (el-get 'sync '(anything))
+  (require 'anything-config)
+  (anything-set-anything-command-map-prefix-key
+   'anything-command-map-prefix-key "C-c C-<SPC>")
   (define-key global-map (kbd "C-x b") 'anything-for-files)
   (define-key anything-map (kbd "C-z") nil)
   (define-key anything-map (kbd "C-l") 'anything-execute-persistent-action)
