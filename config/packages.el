@@ -9,10 +9,10 @@
      (end-of-buffer)
      (eval-print-last-sexp))))
 ;; レシピ置き場
-(add-to-list 'el-get-recipie-path
+(add-to-list 'el-get-recipe-path
              "~/.emacs.d/config/el-get/recipes")
 ;; 追加のレシピ置き場
-(add-to-list 'el-get-recipie-path
+(add-to-list 'el-get-recipe-path
              "~/.emacs.d/config/el-get/local-recipes")
 
 (defvar packages '()
