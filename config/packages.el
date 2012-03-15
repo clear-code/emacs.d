@@ -15,9 +15,6 @@
 (add-to-list 'el-get-recipe-path
              "~/.emacs.d/config/el-get/local-recipes")
 
-(defvar packages '()
-  "List of package names to be installed")
-
 (require 'package)
 
 ;;; grep-edit
@@ -73,4 +70,4 @@
 
 ;;; パッケージをインストール
 ;; 2012-03-15
-(el-get 'sync packages)
+(el-get 'sync)
