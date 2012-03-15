@@ -182,6 +182,11 @@
 (put 'downcase-region 'disabled nil)
 
 
+;;; 現在の関数名を画面上部に表示する。
+;; 2011-03-15
+(which-function-mode 1)
+
+
 ;;; Emacsサーバー
 ;; emacsclientで接続できるようにする。
 ;; 2011-06-14
