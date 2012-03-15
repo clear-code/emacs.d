@@ -1,0 +1,4 @@
+(:name popwin
+       :type git
+       :url "https://github.com/m2ym/popwin-el.git"
+       :features (popwin))
