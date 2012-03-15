@@ -31,10 +31,7 @@
 
 ;;; Auto Complete
 ;; 自動補完
-(package-install 'github "m2ym/auto-complete" 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories
-             (format "%s/auto-complete/dict" package-base-dir))
-(ac-config-default)
+(add-to-list 'packages 'auto-complete)
 (add-hook 'auto-complete-mode-hook
           (lambda ()
             (define-key ac-completing-map (kbd "C-n") 'ac-next)
