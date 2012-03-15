@@ -1,0 +1,5 @@
+(:name run-test
+       :type git
+       :url "https://github.com/kou/run-test.git"
+       :load-path ("lib")
+       :features (run-test-setting))
