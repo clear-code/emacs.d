@@ -10,7 +10,7 @@
      (eval-print-last-sexp))))
 ;; レシピ置き場
 (add-to-list 'el-get-recipe-path
-             "~/.emacs.d/config/el-get/recipes")
+             (concat (file-name-directory load-file-name) "/el-get/recipes"))
 ;; 追加のレシピ置き場
 (add-to-list 'el-get-recipe-path
              "~/.emacs.d/config/el-get/local-recipes")
