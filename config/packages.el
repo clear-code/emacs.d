@@ -62,6 +62,11 @@
 (el-get 'sync '(ruby-mode-trunk))
 
 
+;;; rabbit-mode
+;; 2012-03-16
+(el-get 'sync '(rabbit-mode))
+
+
 ;;; run-test
 ;; テスト実行
 (el-get 'sync '(run-test))
