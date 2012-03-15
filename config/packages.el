@@ -22,7 +22,7 @@
 
 ;;; grep-edit
 ;; *grep*で編集できるようにする
-(add-to-list 'packages 'grep-edit)
+(el-get 'sync '(grep-edit))
 (add-hook 'grep-setup-hook
           (lambda ()
             (define-key grep-mode-map
@@ -31,7 +31,7 @@
 
 ;;; Auto Complete
 ;; 自動補完
-(add-to-list 'packages 'auto-complete)
+(el-get 'sync '(auto-complete))
 (add-hook 'auto-complete-mode-hook
           (lambda ()
             (define-key ac-completing-map (kbd "C-n") 'ac-next)
