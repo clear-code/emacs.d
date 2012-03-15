@@ -8,9 +8,6 @@
    (lambda (status)
      (end-of-buffer)
      (eval-print-last-sexp))))
-
-
-(require 'package)
 ;; レシピ置き場
 (add-to-list 'el-get-recipie-path
              "~/.emacs.d/config/el-get/recipes")
@@ -21,6 +18,8 @@
 (defvar packages '()
   "List of package names to be installed")
 
+(require 'package)
+
 ;;; grep-edit
 ;; *grep*で編集できるようにする
 (package-install 'emacswiki "grep-edit.el" 'grep-edit)
