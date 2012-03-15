@@ -57,3 +57,11 @@
 ;;; uim
 ;; 2011-06-27
 (load "config/packages/uim")
+
+
+;;; 追加の設定
+;; 個別の設定があったら読み込む
+;; 2012-03-15
+(condition-case err
+    (load "config/packages/local")
+  (error))
