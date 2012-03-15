@@ -169,6 +169,12 @@
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 
 
+;;; shebangがあるファイルを保存すると実行権をつける。
+;; 2012-03-15
+(add-hook 'after-save-hook
+          'executable-make-buffer-file-executable-if-script-p)
+
+
 ;;; リージョンの大文字小文字変換を有効にする。
 ;; C-x C-u -> upcase
 ;; C-x C-l -> downcase
