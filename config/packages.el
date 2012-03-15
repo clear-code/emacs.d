@@ -73,7 +73,3 @@
 (condition-case err
     (load "config/packages/local")
   (error))
-
-;;; パッケージをインストール
-;; 2012-03-15
-(el-get 'sync)
