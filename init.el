@@ -1,8 +1,7 @@
 ;;; ロードパス
 ;; ロードパスの追加
 (setq load-path (append
-                 '("~/.emacs.d"
-                   "~/.emacs.d/packages")
+                 '("~/.emacs.d")
                  load-path))
 
 
