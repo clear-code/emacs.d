@@ -22,10 +22,11 @@
 
 ;;; grep-edit
 ;; *grep*で編集できるようにする
-(package-install 'emacswiki "grep-edit.el" 'grep-edit)
+(add-to-list 'packages 'grep-edit)
 (add-hook 'grep-setup-hook
           (lambda ()
-            (define-key grep-mode-map (kbd "C-c C-c") 'grep-edit-finish-edit)))
+            (define-key grep-mode-map
+              (kbd "C-c C-c") 'grep-edit-finish-edit)))
 
 
 ;;; Auto Complete
