@@ -1,0 +1,4 @@
+(:name grep-edit
+       :type emacswiki
+       :after (lambda ()
+                (require 'grep-edit)))
