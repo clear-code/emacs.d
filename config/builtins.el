@@ -27,6 +27,11 @@
 (load "config/builtins/cc-mode")
 
 
+;;; emacs-lisp-mode
+;; 2012-03-18
+(load "config/builtins/emacs-lisp-mode")
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-18
