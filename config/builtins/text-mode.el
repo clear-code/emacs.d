@@ -7,7 +7,4 @@
  'text-mode-hook
  (lambda ()
    ;; 自動で長過ぎる行を分割する
-   (auto-fill-mode 1)
-
-   ;; 随時スペルチェックをする
-   (flyspell-mode 1)))
+   (auto-fill-mode 1)))
