@@ -12,11 +12,16 @@
 
   * ~/.emacs.d/init.el
   * ~/.emacs.d/config/builtins.el
+  * ~/.emacs.d/config/builtins/local.el（カスタマイズ用）
   * ~/.emacs.d/config/packages.el
   * ~/.emacs.d/config/el-get/local-recipes/*.rcp（カスタマイズ用）
   * ~/.emacs.d/config/el-get/recipes/*.rcp
   * ~/.emacs.d/config/packages/local.el（カスタマイズ用）
   * ~/.emacs.d/local.el（カスタマイズ用）
+
+## 標準Elisp用設定のカスタマイズ
+
+~/.emacs.d/config/builtins/local.elに設定を書くと自動で読み込まれます。標準Elisp用の設定はここに書いてください。
 
 ## パッケージのカスタマイズ
 

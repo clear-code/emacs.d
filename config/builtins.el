@@ -20,3 +20,11 @@
 ;; 2011-03-09
 (setq-default flyspell-mode t)
 (setq ispell-dictionary "american")
+
+
+;;; 追加の設定
+;; 個別の設定があったら読み込む
+;; 2012-03-18
+(condition-case err
+    (load "config/builtins/local")
+  (error))
