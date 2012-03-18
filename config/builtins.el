@@ -22,6 +22,11 @@
 (setq ispell-dictionary "american")
 
 
+;;; text-mode
+;; 2012-03-18
+(load "config/builtins/text-mode")
+
+
 ;;; cc-mode
 ;; 2012-03-18
 (load "config/builtins/cc-mode")
