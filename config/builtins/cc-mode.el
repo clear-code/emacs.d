@@ -6,6 +6,9 @@
 (add-hook
  'c-mode-common-hook
  (lambda ()
+   ;; BSDスタイルをベースにする。
+   (c-set-style "bsd")
+
    ;; スペースでインデントをする
    (setq indent-tabs-mode nil)
 
