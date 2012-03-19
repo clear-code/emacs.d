@@ -6,7 +6,7 @@
 (add-hook
  'c-mode-common-hook
  (lambda ()
-   ;; BSDスタイルをベースにする。
+   ;; BSDスタイルをベースにする
    (c-set-style "bsd")
 
    ;; スペースでインデントをする
