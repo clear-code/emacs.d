@@ -26,11 +26,6 @@
           (find-path-in-parents parent-directory base-names)))))
 
 
-;;; 警告
-;; 2011-03-01
-(require 'warnings)
-
-
 ;;; スペルチェック
 ;; 2011-03-09
 (setq-default flyspell-mode t)
