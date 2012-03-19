@@ -57,6 +57,13 @@
   (setq browse-url-browser-function original-browse-url-browser-function))
 
 
+;;; Migemo
+;; ローマ字で日本語をインクリメンタルサーチする。
+;; 2012-03-19
+;; インストールされていたら有効にする。
+(require 'migemo nil t)
+
+
 ;;; ruby-mode
 ;; Emacsにバンドルされているruby-modeは古いのでRubyのリポジ
 ;; トリに入っているものを使う。
