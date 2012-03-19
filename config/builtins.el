@@ -11,6 +11,7 @@
           ((string-match-p "\\.git$" path)
            (magit-status (file-name-directory path))))))
 (define-key dired-mode-map "V" 'dired-vc-status)
+
 ;; directoryの中にbase-names内のパスが含まれていたらその絶対パスを返す。
 ;; 含まれていなかったらdirectoryの親のディレクトリを再帰的に探す。
 ;; 2011-03-19
