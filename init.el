@@ -92,7 +92,7 @@
                          space-before-tab  ; タブの前にあるスペースを対象とする。
                          space-after-tab)) ; タブの後にあるスペースを対象とする。
 ;; デフォルトで視覚化を有効にする。
-(global-whitespace-mode)
+(global-whitespace-mode 1)
 
 
 ;;; 位置
