@@ -24,7 +24,9 @@
 (define-key global-map (kbd "C-[ M-C-g") 'goto-line)      ; 指定行へ移動
 ;; ウィンドウ移動
 ;; 2011-02-17
+;; 次のウィンドウへ移動
 (define-key global-map (kbd "C-M-n") 'next-multiframe-window)
+;; 前のウィンドウへ移動
 (define-key global-map (kbd "C-M-p") 'previous-multiframe-window)
 
 
