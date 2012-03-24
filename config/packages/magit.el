@@ -8,8 +8,7 @@
   '((name . "Commit Messages")
     (candidates . anything-c-commit-messages-candidates)
     (action . (("Insert" . (lambda (str) (insert str)))))
-    (migemo)
-    (multiline))
+    (migemo))
   "Source for browsing and inserting commit messages.")
 
 (defun anything-c-commit-messages-candidates ()
