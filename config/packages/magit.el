@@ -22,7 +22,7 @@
                  (string-equal message ""))
                messages)))
 
-(defun anything-show-commit-messages ()
+(defun anything-commit-messages ()
   "`anything' for commit message."
   (interactive)
   (anything-other-buffer 'anything-c-source-commit-messages
@@ -30,7 +30,7 @@
 
 (defun magit-enable-anything ()
   ;; commit messageの編集時にanythingでgit logのコメントから選択
-  (define-key magit-log-edit-mode-map (kbd "C-c i") 'anything-show-commit-messages))
+  (define-key magit-log-edit-mode-map (kbd "C-c i") 'anything-commit-messages))
 
 (add-hook 'magit-mode-hook
           'magit-enable-anything)
