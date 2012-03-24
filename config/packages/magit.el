@@ -24,7 +24,7 @@
                messages)))
 
 (defun anything-commit-messages ()
-  "`anything' for commit message."
+  "`anything' for commit messages."
   (interactive)
   (anything-other-buffer 'anything-c-source-commit-messages
                          "*anything commit messages*"))
