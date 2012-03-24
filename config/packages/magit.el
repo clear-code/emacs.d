@@ -25,5 +25,9 @@
   (anything-other-buffer 'anything-c-source-log-edit-messages
                          "*anything log-edit messages*"))
 
-;; Magitのcommit messageの編集時にanythingでgit logのコメントから選択
-(define-key magit-log-edit-mode-map (kbd "C-s") 'anything-show-log-edit-messages)
+(defun magit-enable-anything ()
+  ;; commit messageの編集時にanythingでgit logのコメントから選択
+  (define-key magit-log-edit-mode-map (kbd "C-s") 'anything-show-log-edit-messages))
+
+(add-hook 'magit-mode-hook
+          'magit-enable-anything)
