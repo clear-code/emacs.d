@@ -3,16 +3,16 @@
 
 (el-get 'sync '(magit))
 
-;; commit logをanythingで選択できるようにする
-(defvar anything-c-source-log-edit-messages
-  '((name . "Log-edit Messages")
-    (candidates . anything-c-log-edit-messages-candidates)
+;; コミットメッセージをanythingで挿入できるようにする
+(defvar anything-c-source-commit-messages
+  '((name . "Commit Messages")
+    (candidates . anything-c-commit-messages-candidates)
     (action . (("Insert" . (lambda (str) (insert str)))))
     (migemo)
     (multiline))
-  "Source for browsing and inserting Log-edit messages.")
+  "Source for browsing and inserting commit messages.")
 
-(defun anything-c-log-edit-messages-candidates ()
+(defun anything-c-commit-messages-candidates ()
   (let* ((messages-string
           (shell-command-to-string "\\git \\log -50 --format=\"%x00%B\""))
          (raw-messages (string-to-list (split-string messages-string "\0")))
@@ -23,15 +23,15 @@
                  (string-equal message ""))
                messages)))
 
-(defun anything-show-log-edit-messages ()
-  "`anything' for Log-edit message."
+(defun anything-show-commit-messages ()
+  "`anything' for commit message."
   (interactive)
-  (anything-other-buffer 'anything-c-source-log-edit-messages
-                         "*anything log-edit messages*"))
+  (anything-other-buffer 'anything-c-source-commit-messages
+                         "*anything commit messages*"))
 
 (defun magit-enable-anything ()
   ;; commit messageの編集時にanythingでgit logのコメントから選択
-  (define-key magit-log-edit-mode-map (kbd "C-s") 'anything-show-log-edit-messages))
+  (define-key magit-log-edit-mode-map (kbd "C-s") 'anything-show-commit-messages))
 
 (add-hook 'magit-mode-hook
           'magit-enable-anything)
