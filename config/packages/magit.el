@@ -2,7 +2,7 @@
 ;; 2012-03-23
 (el-get 'sync '(magit))
 
-;;; commit logをanythingで選択できるようにする
+;; commit logをanythingで選択できるようにする
 (defvar anything-c-source-log-edit-comment
   '((name . "Log-edit Comment")
     (candidates . anything-c-log-edit-comment-candidates)
