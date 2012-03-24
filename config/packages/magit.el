@@ -29,7 +29,7 @@
                          "*anything commit messages*"))
 
 (defun magit-enable-anything ()
-  ;; commit messageの編集時にanythingでgit logのコメントから選択
+  ;; 過去のコミットメッセージを挿入
   (define-key magit-log-edit-mode-map (kbd "C-c i") 'anything-commit-messages))
 
 (add-hook 'magit-mode-hook
