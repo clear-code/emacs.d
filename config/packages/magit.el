@@ -14,7 +14,7 @@
 
 (defun anything-c-log-edit-messages-candidates ()
   (let* ((messages-string
-          (shell-command-to-string "\\git \\log -5 --format=\"%x00%B\""))
+          (shell-command-to-string "\\git \\log -50 --format=\"%x00%B\""))
          (messages (string-to-list (split-string messages-string "\0"))))
     (mapcar (lambda (message)
               (string-strip message))
