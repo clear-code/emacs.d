@@ -1,5 +1,6 @@
 ;;; Magit
-;; 2012-03-23
+;;; 2012-03-23
+
 (el-get 'sync '(magit))
 
 ;; commit logをanythingで選択できるようにする
