@@ -16,9 +16,11 @@
   (let* ((messages-string
           (shell-command-to-string "\\git \\log -50 --format=\"%x00%B\""))
          (messages (string-to-list (split-string messages-string "\0"))))
-    (mapcar (lambda (message)
-              (string-strip message))
-            messages)))
+    (remove-if (lambda (message)
+                 (string-equal message ""))
+               (mapcar (lambda (message)
+                         (string-strip message))
+                       messages))))
 
 (defun anything-show-log-edit-messages ()
   "`anything' for Log-edit message."
