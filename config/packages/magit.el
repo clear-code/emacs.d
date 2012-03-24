@@ -2,7 +2,6 @@
 ;; 2012-03-23
 (el-get 'sync '(magit))
 
-(when (require 'magit nil t)
   ;;; commit logをanythingで選択できるようにする
   (defvar anything-c-source-log-edit-comment
     '((name . "Log-edit Comment")
@@ -26,4 +25,4 @@
                            "*anything log-edit comment*"))
 
   ;; Magitのcommit messageの編集時にanythingでgit logのコメントから選択
-  (define-key magit-log-edit-mode-map (kbd "C-s") 'anything-show-log-edit-comment))
+  (define-key magit-log-edit-mode-map (kbd "C-s") 'anything-show-log-edit-comment)
