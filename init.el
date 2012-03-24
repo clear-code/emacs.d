@@ -5,6 +5,16 @@
                  load-path))
 
 
+;;; 追加の関数定義
+;; 2012-03-24
+;; 便利関数の定義
+(load "functions/convenience")
+;; 個別の関数定義があったら読み込む
+(condition-case err
+    (load "functions/local")
+  (error))
+
+
 ;;; 日本語環境
 ;; Localeに合わせた環境の設定
 (set-locale-environment nil)
