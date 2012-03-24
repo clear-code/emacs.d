@@ -15,12 +15,13 @@
 (defun anything-c-log-edit-messages-candidates ()
   (let* ((messages-string
           (shell-command-to-string "\\git \\log -50 --format=\"%x00%B\""))
-         (messages (string-to-list (split-string messages-string "\0"))))
+         (raw-messages (string-to-list (split-string messages-string "\0")))
+         (messages (mapcar (lambda (raw-message)
+                             (string-strip raw-message))
+                           raw-messages)))
     (remove-if (lambda (message)
                  (string-equal message ""))
-               (mapcar (lambda (message)
-                         (string-strip message))
-                       messages))))
+               messages)))
 
 (defun anything-show-log-edit-messages ()
   "`anything' for Log-edit message."
