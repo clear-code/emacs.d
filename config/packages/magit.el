@@ -14,9 +14,8 @@
 
 (defun anything-c-log-edit-messages-candidates ()
   (let* ((candidates
-          (shell-command-to-string "\\git \\log -500 | \\grep -E '^    .+'"))
-         (logs (string-to-list (split-string candidates "\n    "))))
-    (push (replace-regexp-in-string "^    " "" (pop logs)) logs)
+          (shell-command-to-string "\\git \\log -5 --format=\"%x00%B\""))
+         (logs (string-to-list (split-string candidates "\0"))))
     logs))
 
 (defun anything-show-log-edit-messages ()
