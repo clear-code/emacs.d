@@ -31,7 +31,8 @@
 
 (defun magit-enable-anything ()
   ;; 過去のコミットメッセージを挿入
-  (define-key magit-log-edit-mode-map (kbd "C-c i") 'anything-git-commit-messages))
+  (define-key magit-log-edit-mode-map
+    (kbd "C-c i") 'anything-git-commit-messages))
 
 (add-hook 'magit-mode-hook
           'magit-enable-anything)
