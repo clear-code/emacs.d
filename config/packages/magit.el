@@ -13,10 +13,10 @@
   "Source for browse and insert Log-edit messages.")
 
 (defun anything-c-log-edit-messages-candidates ()
-  (let* ((candidates
+  (let* ((messages-string
           (shell-command-to-string "\\git \\log -5 --format=\"%x00%B\""))
-         (logs (string-to-list (split-string candidates "\0"))))
-    logs))
+         (messages (string-to-list (split-string messages-string "\0"))))
+    messages))
 
 (defun anything-show-log-edit-messages ()
   "`anything' for Log-edit message."
