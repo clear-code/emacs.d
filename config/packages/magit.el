@@ -10,7 +10,7 @@
     (action . (("Insert" . (lambda (str) (insert str)))))
     (migemo)
     (multiline))
-  "Source for browse and insert Log-edit messages.")
+  "Source for browsing and inserting Log-edit messages.")
 
 (defun anything-c-log-edit-messages-candidates ()
   (let* ((messages-string
