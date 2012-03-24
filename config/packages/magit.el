@@ -1,5 +1,7 @@
 ;;; Magit
 ;; 2012-03-23
+(el-get 'sync '(magit))
+
 (when (require 'magit nil t)
   ;;; commit logをanythingで選択できるようにする
   (defvar anything-c-source-log-edit-comment
