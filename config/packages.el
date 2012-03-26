@@ -86,6 +86,12 @@
 (load "config/packages/magit")
 
 
+;;; rst-mode
+;; reStructuredText編集用のモード
+;; 2012-03-24
+(el-get 'sync '(rst-mode))
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-15
