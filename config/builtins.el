@@ -14,7 +14,11 @@
 
 
 ;;; スペルチェック
-;; 2011-03-09
+;;; 2011-03-09
+
+;; M-TABのキーバインドを変更しない
+;; 2011-03-27
+(setq flyspell-use-meta-tab nil)
 (setq-default flyspell-mode t)
 (setq ispell-dictionary "american")
 
