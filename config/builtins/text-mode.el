@@ -7,4 +7,6 @@
  'text-mode-hook
  (lambda ()
    ;; 自動で長過ぎる行を分割する
-   (auto-fill-mode 1)))
+   (auto-fill-mode 1)
+   ;; スペースでインデントする
+   (setq indent-tabs-mode nil)))
