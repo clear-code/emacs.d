@@ -36,3 +36,8 @@
 
 (add-hook 'magit-mode-hook
           'magit-enable-anything)
+
+;; diffを表示しているときに文字単位での変更箇所も強調表示する
+;; 'allではなくtにすると現在選択中のhunkのみ協調表示する
+;; 2012-04-02
+(setq magit-diff-refine-hunk 'all)
