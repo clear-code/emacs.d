@@ -24,6 +24,10 @@
 ;; スペルチェックには英語の辞書を使う
 (setq ispell-dictionary "american")
 
+;;; diff-mode
+;;; 2012-04-02
+(load "config/builtins/diff-mode")
+
 
 ;;; text-mode
 ;; 2012-03-18
