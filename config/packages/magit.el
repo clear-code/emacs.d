@@ -44,6 +44,9 @@
   ;; 'allではなくtにすると現在選択中のhunkのみ協調表示する
   ;; 2012-04-02
   (setq magit-diff-refine-hunk 'all)
+  ;; diff用のfaceを設定する
+  ;; 2012-04-02
+  (diff-mode-setup-faces)
   ;; diffの表示設定が上書きされてしまうのでハイライトを無効にする
   ;; 2012-04-02
   (set-face-attribute 'magit-item-highlight nil :inherit nil))
