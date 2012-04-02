@@ -40,9 +40,9 @@
 ;; diff関連の設定
 ;; 2012-04-02
 (defun magit-setup-diff ()
-;; diffを表示しているときに文字単位での変更箇所も強調表示する
-;; 'allではなくtにすると現在選択中のhunkのみ協調表示する
-;; 2012-04-02
-(setq magit-diff-refine-hunk 'all))
+  ;; diffを表示しているときに文字単位での変更箇所も強調表示する
+  ;; 'allではなくtにすると現在選択中のhunkのみ協調表示する
+  ;; 2012-04-02
+  (setq magit-diff-refine-hunk 'all))
 
 (add-hook 'magit-mode-hook 'magit-setup-diff)
