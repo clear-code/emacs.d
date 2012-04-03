@@ -18,5 +18,10 @@
   (set-face-attribute 'diff-refine-change nil
                       :foreground nil :background nil
                       :weight 'bold :inverse-video t :box t))
-
 (add-hook 'diff-mode-hook 'diff-mode-setup-faces)
+
+;; diffを表示したらすぐに文字単位での強調表示も行う
+;; 2012-04-03
+(defun diff-mode-refine-automatically ()
+  (diff-auto-refine-mode 1))
+(add-hook 'diff-mode-hook 'diff-mode-refine-automatically)
