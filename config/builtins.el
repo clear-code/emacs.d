@@ -47,6 +47,4 @@
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-18
-(condition-case err
-    (load "config/builtins/local")
-  (error))
+(load "config/builtins/local" t)
