@@ -33,7 +33,6 @@
   ;; 過去のコミットメッセージを挿入
   (define-key magit-log-edit-mode-map
     (kbd "C-c i") 'anything-git-commit-messages))
-
 (add-hook 'magit-mode-hook
           'magit-enable-anything)
 
@@ -50,5 +49,4 @@
   ;; diffの表示設定が上書きされてしまうのでハイライトを無効にする
   ;; 2012-04-02
   (set-face-attribute 'magit-item-highlight nil :inherit nil))
-
 (add-hook 'magit-mode-hook 'magit-setup-diff)
