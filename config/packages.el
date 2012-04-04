@@ -92,6 +92,12 @@
 (el-get 'sync '(rst-mode))
 
 
+;;; coffe-mode
+;; CoffeeScript編集用のモード
+;; 2012-04-04
+(el-get 'sync '(coffee-mode))
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-15
