@@ -92,6 +92,12 @@
 (el-get 'sync '(rst-mode))
 
 
+;;; js2-mode
+;; JavaScript編集用のモード
+;; 2012-04-05
+(el-get 'sync '(mooz-js2-mode))
+
+
 ;;; coffe-mode
 ;; CoffeeScript編集用のモード
 ;; 2012-04-04
