@@ -92,6 +92,12 @@
 (el-get 'sync '(rst-mode))
 
 
+;;; textile-mode
+;; Textile編集用のモード
+;; 2012-04-11
+(el-get 'sync '(textile-mode))
+
+
 ;;; js2-mode
 ;; JavaScript編集用のモード
 ;; 2012-04-05
