@@ -35,6 +35,12 @@
 (define-key global-map (kbd "C-M-n") 'next-multiframe-window)
 ;; 前のウィンドウへ移動
 (define-key global-map (kbd "C-M-p") 'previous-multiframe-window)
+;; 定義へ移動
+;; 2012-04-15
+;; C-x F -> 関数定義へ移動
+;; C-x K -> キーにバインドされている関数定義へ移動
+;; C-x V -> 変数定義へ移動
+(find-function-setup-keys)
 
 
 ;;; grep
