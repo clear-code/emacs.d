@@ -65,10 +65,8 @@
 
 
 ;;; ruby-mode
-;; Emacsにバンドルされているruby-modeは古いのでRubyのリポジ
-;; トリに入っているものを使う。
 ;; 2012-03-15
-(el-get 'sync '(ruby-mode-trunk))
+(load "config/packages/ruby-mode")
 
 
 ;;; rabbit-mode
