@@ -205,6 +205,15 @@
 (put 'downcase-region 'disabled nil)
 
 
+;;; kill
+;; 2012-08-10
+;; Emacs 24からクリップボードだけ使うようになっているので
+;; Emacs 23のようにprimary selectionを使うように変更
+;;   * killしたらprimary selectionにも入れる
+;;   * yankするときはprimary selectionのものを使う
+(setq x-select-enable-primary t)
+
+
 ;;; 現在の関数名をウィンドウ上部に表示する。
 ;; 2011-03-15
 (which-function-mode 1)
