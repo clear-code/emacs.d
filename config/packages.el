@@ -97,9 +97,8 @@
 
 
 ;;; js2-mode
-;; JavaScript編集用のモード
 ;; 2012-04-05
-(el-get 'sync '(mooz-js2-mode))
+(load "config/packages/js2-mode")
 
 
 ;;; coffe-mode
