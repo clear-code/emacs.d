@@ -206,12 +206,14 @@
 
 
 ;;; kill
-;; 2012-08-10
+;; 2012-09-01
 ;; Emacs 24からクリップボードだけ使うようになっているので
 ;; Emacs 23のようにprimary selectionを使うように変更
-;;   * killしたらprimary selectionにも入れる
+;;   * killしたらprimary selectionにだけ入れる（Xの場合のみ）
 ;;   * yankするときはprimary selectionのものを使う
 (setq x-select-enable-primary t)
+(when (eq window-system 'x)
+  (setq x-select-enable-clipboard nil))
 
 
 ;;; 現在の関数名をウィンドウ上部に表示する。
