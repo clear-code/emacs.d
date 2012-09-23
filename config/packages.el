@@ -107,6 +107,12 @@
 (el-get 'sync '(coffee-mode))
 
 
+;;; less-css-mode
+;; LESS編集用のモード
+;; 2012-09-23
+(el-get 'sync '(less-css-mode))
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-15
