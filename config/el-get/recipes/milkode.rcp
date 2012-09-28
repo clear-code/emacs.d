@@ -1,0 +1,4 @@
+(:name milkode
+       :type git
+       :url "https://github.com/ongaeshi/emacs-milkode.git"
+       :features (milkode))
