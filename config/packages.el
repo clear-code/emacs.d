@@ -119,6 +119,12 @@
 (el-get 'sync '(milkode))
 
 
+;;; markdown-mode
+;; Markdown編集用のモード
+;; 2012-10-15
+(el-get 'sync '(markdown-mode))
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-15
