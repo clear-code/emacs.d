@@ -125,6 +125,11 @@
 (el-get 'sync '(markdown-mode))
 
 
+;;; expand-region
+;; 2012-12-06
+(load "config/packages/expand-region")
+
+
 ;;; multiple-cursors
 ;; 2012-12-05
 (load "config/packages/multiple-cursors")
