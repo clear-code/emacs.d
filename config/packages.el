@@ -125,6 +125,11 @@
 (el-get 'sync '(markdown-mode))
 
 
+;;; multiple-cursors
+;; 2012-12-05
+(load "config/packages/multiple-cursors")
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-15
