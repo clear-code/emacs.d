@@ -25,3 +25,18 @@
    ;; EmacsFrameClass   => Emacs Frame Class
    ;; NSGraphicsContext => NS Graphics Context
    (subword-mode 1)))
+
+;; c++-modeだけの設定
+;; 2013-01-05
+(add-hook
+ 'c++-mode-hook
+ (lambda ()
+   ;; 定義開始時の開き波かっこ「{」の前で改行しない
+   ;; デフォルトでは前後に改行が入る
+   ;; afterを指定すると後だけに改行がはいる
+   ;; (defun-open before after)にすると前後に改行が入る
+   (setq c-hanging-braces-alist
+         `((defun-open after)   ; トップレベルの関数定義
+           (class-open after)   ; クラス定義
+           (inline-open after)  ; クラス定義内のインラインメソッド定義
+           ,@c-hanging-braces-alist))))
