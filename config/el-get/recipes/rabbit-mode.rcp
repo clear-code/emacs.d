@@ -1,6 +1,6 @@
 (:name rabbit-mode
        :type git
-       :url "https://github.com/shockers/rabbit.git"
+       :url "https://github.com/rabbit-shocker/rabbit.git"
        :load-path ("misc/emacs")
        :after (lambda ()
                 (autoload 'rabbit-mode "rabbit-mode" "major mode for Rabbit" t)
