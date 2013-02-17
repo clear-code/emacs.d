@@ -1,4 +1,5 @@
 (:name logalimacs
        :type git
        :url "https://github.com/logaling/logalimacs.git"
+       :depends (popup popwin stem)
        :features (logalimacs))
