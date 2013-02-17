@@ -1,0 +1,4 @@
+(:name stem
+       :type git
+       :url "https://github.com/yuutayamada/stem.git"
+       :features (stem))
