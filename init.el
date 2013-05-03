@@ -104,6 +104,9 @@
                          lines-tail        ; 長すぎる行のうち
                                            ; whitespace-line-column以降のみを
                                            ; 対象とする。
+                         indentation       ; indent-tabs-modeと逆のインデントを
+                                           ; 対象とする。
+                                           ; 2013-05-03
                          space-before-tab  ; タブの前にあるスペースを対象とする。
                          space-after-tab)) ; タブの後にあるスペースを対象とする。
 ;; デフォルトで視覚化を有効にする。
