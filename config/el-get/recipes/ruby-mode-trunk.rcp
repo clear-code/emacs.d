@@ -8,8 +8,5 @@
                 (add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
                 (add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
                 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
-                (add-to-list 'interpreter-mode-alist '("ruby" . ruby-mode))
-                ;; For MRI source code
-                (add-hook 'c-mode-hook 'ruby-style-c-mode)
-                (add-hook 'c++-mode-hook 'ruby-style-c-mode))
+                (add-to-list 'interpreter-mode-alist '("ruby" . ruby-mode)))
        :features (ruby-mode ruby-style))
