@@ -1,3 +1,24 @@
+;;; package.el
+;; Emacs標準のパッケージ管理システム
+;; 2013-12-31
+(require 'package)
+
+;; MELPAからもインストールする。
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/")
+             t)
+;; 初期化。
+(package-initialize)
+;; 初回起動時はパッケージリストを更新する。
+(unless package-archive-contents
+  (package-refresh-contents))
+
+;; 便利関数。インストールされていなかったらインストールする。
+(defun package-ensure-install (name)
+  (unless (package-installed-p name)
+    (package-install name)))
+
+
 ;;; el-get
 ;; 複数のソースからパッケージをインストールできるパッケージ管理システム
 ;; 2012-03-15
