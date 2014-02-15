@@ -161,6 +161,12 @@
 (load "config/packages/anzu")
 
 
+;;; Monky
+;; MagitのようなインターフェイスのMercurialクライアント
+;; 2014-02-15
+(package-ensure-install 'monky)
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-15
