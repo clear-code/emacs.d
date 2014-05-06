@@ -9,7 +9,7 @@
 ;; 何も操作しないと現在のポイントにあるシンボルの情報をミニバッファーに表示する。
 (add-to-list 'semantic-default-submodes
              'global-semantic-idle-summary-mode)
-;; バッファーのヘッダーに現在の関数名を表示する。
+;; 表示されている内容の先頭行の関数名をバッファーのヘッダーに表示する。
 (add-to-list 'semantic-default-submodes
              'global-semantic-stickyfunc-mode)
 
