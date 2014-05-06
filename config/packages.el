@@ -117,11 +117,6 @@
 (el-get 'sync '(textile-mode))
 
 
-;;; js2-mode
-;; 2012-04-05
-(load "config/packages/js2-mode")
-
-
 ;;; coffe-mode
 ;; CoffeeScript編集用のモード
 ;; 2012-04-04
