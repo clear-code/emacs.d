@@ -9,6 +9,9 @@
 ;; 何も操作しないと現在のポイントにあるシンボルの情報をミニバッファーに表示する。
 (add-to-list 'semantic-default-submodes
              'global-semantic-idle-summary-mode)
+;; バッファーのヘッダーに現在の関数名を表示する。
+(add-to-list 'semantic-default-submodes
+             'global-semantic-stickyfunc-mode)
 
 ;; Semanticを有効にする。
 (semantic-mode)
