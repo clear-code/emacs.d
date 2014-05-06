@@ -40,6 +40,11 @@
 (load "config/builtins/emacs-lisp-mode")
 
 
+;;; Semantic
+;; 2014-05-06
+(load "config/builtins/semantic")
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-18
