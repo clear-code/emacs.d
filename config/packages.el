@@ -60,21 +60,22 @@
             (define-key ac-completing-map (kbd "C-p") 'ac-previous)))
 
 
-;;; Anything
+;;; Helm
+;; 2014-06-20
 ;; iswitchbの代わり
 (let ((original-browse-url-browser-function browse-url-browser-function))
-  (el-get 'sync '(anything))
-  (require 'anything-config)
-  (anything-set-anything-command-map-prefix-key
-   'anything-command-map-prefix-key "C-c C-<SPC>")
-  (define-key global-map (kbd "C-x b") 'anything-for-files)
-  (define-key global-map (kbd "C-x g") 'anything-imenu) ; experimental
-  (define-key global-map (kbd "M-y") 'anything-show-kill-ring)
-  (define-key anything-map (kbd "C-z") nil)
-  (define-key anything-map (kbd "C-l") 'anything-execute-persistent-action)
-  (define-key anything-map (kbd "C-o") nil)
-  (define-key anything-map (kbd "C-M-n") 'anything-next-source)
-  (define-key anything-map (kbd "C-M-p") 'anything-previous-source)
+  (el-get 'sync '(helm))
+  (require 'helm-config)
+  (setq helm-command-prefix-key "C-c C-<SPC>")
+  (require 'helm)
+  (define-key global-map (kbd "C-x b") 'helm-for-files)
+  (define-key global-map (kbd "C-x g") 'helm-imenu) ; experimental
+  (define-key global-map (kbd "M-y") 'helm-show-kill-ring)
+  (define-key helm-map (kbd "C-z") nil)
+  (define-key helm-map (kbd "C-l") 'helm-execute-persistent-action)
+  (define-key helm-map (kbd "C-o") nil)
+  (define-key helm-map (kbd "C-M-n") 'helm-next-source)
+  (define-key helm-map (kbd "C-M-p") 'helm-previous-source)
   (setq browse-url-browser-function original-browse-url-browser-function))
 
 
