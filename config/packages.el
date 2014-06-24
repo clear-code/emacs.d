@@ -63,7 +63,6 @@
 ;;; Helm
 ;; 2014-06-20
 ;; iswitchbの代わり
-(let ((original-browse-url-browser-function browse-url-browser-function))
   (el-get 'sync '(helm))
   (require 'helm-config)
   (setq helm-command-prefix-key "C-c C-<SPC>")
@@ -76,7 +75,6 @@
   (define-key helm-map (kbd "C-o") nil)
   (define-key helm-map (kbd "C-M-n") 'helm-next-source)
   (define-key helm-map (kbd "C-M-p") 'helm-previous-source)
-  (setq browse-url-browser-function original-browse-url-browser-function))
 
 
 ;;; Migemo
