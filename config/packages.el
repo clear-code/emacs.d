@@ -161,6 +161,11 @@
 (package-ensure-install 'monky)
 
 
+;;; go-mode
+;; 2014-08-16
+(load "config/packages/go-mode")
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-15
