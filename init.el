@@ -29,6 +29,8 @@
 (define-key global-map (kbd "C-c ;") 'comment-dwim)       ; コメントアウト
 (define-key global-map (kbd "M-C-g") 'grep)               ; grep
 (define-key global-map (kbd "C-[ M-C-g") 'goto-line)      ; 指定行へ移動
+;; 2014-08-31
+(define-key global-map (kbd "C-[ M-C-a") 'align)          ; 整形
 ;; C-x uでポイント上にあるURLを開く
 ;; 2014-05-18
 (define-key global-map (kbd "C-x u") 'browse-url-at-point)
