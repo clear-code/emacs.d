@@ -70,6 +70,7 @@
 (define-key global-map (kbd "C-x b") 'helm-for-files)
 (define-key global-map (kbd "C-x g") 'helm-imenu)
 (define-key global-map (kbd "M-y") 'helm-show-kill-ring)
+(define-key global-map (kbd "C-x 8") 'helm-ucs)
 (define-key helm-map (kbd "C-z") nil)
 (define-key helm-map (kbd "C-l") 'helm-execute-persistent-action)
 (define-key helm-map (kbd "C-o") nil)
@@ -159,6 +160,11 @@
 ;; MagitのようなインターフェイスのMercurialクライアント
 ;; 2014-02-15
 (package-ensure-install 'monky)
+
+
+;;; vim-region
+;; 2014-02-22
+(load "config/packages/vim-region")
 
 
 ;;; go-mode
