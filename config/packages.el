@@ -162,11 +162,6 @@
 (package-ensure-install 'monky)
 
 
-;;; vim-region
-;; 2014-02-22
-(load "config/packages/vim-region")
-
-
 ;;; go-mode
 ;; 2014-08-16
 (load "config/packages/go-mode")
