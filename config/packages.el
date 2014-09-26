@@ -167,6 +167,11 @@
 (load "config/packages/go-mode")
 
 
+;;; yaml-mode
+;; 2014-09-26
+(el-get 'sync '(yaml-mode))
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-15
