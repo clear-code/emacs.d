@@ -172,6 +172,11 @@
 (el-get 'sync '(yaml-mode))
 
 
+;;; EditorConfig
+;; 2014-10-21
+(package-ensure-install 'editorconfig)
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-15
