@@ -177,6 +177,11 @@
 (package-ensure-install 'editorconfig)
 
 
+;;; scss-mode
+;; 2014-10-22
+(package-ensure-install 'scss-mode)
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-15
