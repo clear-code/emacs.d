@@ -7,7 +7,8 @@
 (defun ruby-insert-end ()
   "Insert 'end'."
   (interactive)
-  (insert "end"))
+  (insert "end")
+  (ruby-indent-line))
 
 (add-hook 'ruby-mode-hook
           (lambda ()
