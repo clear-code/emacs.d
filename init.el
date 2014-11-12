@@ -50,7 +50,8 @@
 ;; Emacs 24.4からC-x TABを連続で入力してもインデントされなくなったが、
 ;; 連続で入力してインデントされる方が便利なので同じ使い勝手を実現する
 ;; 2014-11-06
-(define-key indent-rigidly-map (kbd "C-x TAB") 'indent-rigidly-right)
+(if (boundp 'indent-rigidly-map)
+    (define-key indent-rigidly-map (kbd "C-x TAB") 'indent-rigidly-right))
 
 
 ;;; grep
