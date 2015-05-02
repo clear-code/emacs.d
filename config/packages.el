@@ -179,7 +179,7 @@
 
 ;;; scss-mode
 ;; 2014-10-22
-(package-ensure-install 'scss-mode)
+(load "config/packages/scss-mode")
 
 
 ;;; 追加の設定
