@@ -43,3 +43,12 @@
   ;; 2012-04-02
   (setq magit-diff-refine-hunk 'all))
 (add-hook 'magit-mode-hook 'magit-setup-diff)
+
+;; push関連の設定
+;; 2015-08-17
+(defun magit-setup-push ()
+  ;; pushするときに確認しない
+  ;; pushするときは現在のブランチのみをpushする
+  ;; 2015-08-17
+  (setq magit-push-always-verify nil))
+(add-hook 'magit-mode-hook 'magit-setup-push)
