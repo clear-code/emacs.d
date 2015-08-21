@@ -1,0 +1,5 @@
+(:name ruby-style
+       :type github
+       :pkgname "ruby/ruby"
+       :load-path ("misc")
+       :features (ruby-style))
