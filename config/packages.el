@@ -102,7 +102,9 @@
 
 ;;; Magit
 ;; 2012-03-24
-(load "config/packages/magit")
+(if (>= emacs-major-version 24)
+    (if (>= emacs-minor-version 4)
+        (load "config/packages/magit")))
 
 
 ;;; rst-mode
