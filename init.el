@@ -241,6 +241,12 @@
 (server-start)
 
 
+;;; 警告
+;; ビープ音を無効にする。
+;; 2015-12-30
+(setq ring-bell-function 'ignore)
+
+
 ;;; 追加の設定
 ;; 標準Elispの設定
 (load "config/builtins")
