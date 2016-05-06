@@ -25,6 +25,8 @@
 ;; 基本
 (define-key global-map (kbd "M-?") 'help-for-help)        ; ヘルプ
 (define-key global-map (kbd "C-z") 'undo)                 ; undo
+;; 2016-05-06
+(define-key global-map (kbd "C-x C-z") 'repeat)           ; 繰り返し
 (define-key global-map (kbd "C-c C-i") 'hippie-expand)    ; 補完
 (define-key global-map (kbd "C-c ;") 'comment-dwim)       ; コメントアウト
 (define-key global-map (kbd "M-C-g") 'grep)               ; grep
