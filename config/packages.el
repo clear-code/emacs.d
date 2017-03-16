@@ -183,6 +183,11 @@
 (load "config/packages/scss-mode")
 
 
+;;; rust-mode
+;; 2017-03-16
+(package-ensure-install 'rust-mode)
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-15
