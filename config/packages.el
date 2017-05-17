@@ -193,6 +193,11 @@
 (package-ensure-install 'dockerfile-mode)
 
 
+;;; ESS
+;; 2017-05-17
+(package-ensure-install 'ess)
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-15
