@@ -198,6 +198,11 @@
 (package-ensure-install 'ess)
 
 
+;;; Meson
+;; 2017-10-09
+(package-ensure-install 'meson-mode)
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-15
