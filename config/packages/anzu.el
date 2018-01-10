@@ -22,6 +22,22 @@
 ;; デフォルトで有効にする。
 (global-anzu-mode 1)
 
+;; モードラインに" Anzu"と表示しない。
+;; 2018-01-10
+(setq anzu-mode-lighter "")
+
+;; ヒット数のカウントを最大値を設定して大量にマッチしても重くならないようにする。
+;; 2018-01-10
+(setq anzu-search-threshold 1000)
+
+;; Migemoサポートを有効にする。
+;; 2018-01-10
+(setq anzu-use-migemo t)
+
 ;; 標準の置換コマンドを置き換える。
 (define-key global-map (kbd "M-%")   'anzu-query-replace)
 (define-key global-map (kbd "C-M-%") 'anzu-query-replace-regexp)
+
+;; カーソルのある場所にある単語をカーソルのある範囲内でだけ置換する。
+;; 2018-01-10
+(define-key global-map (kbd "ESC M-%") 'anzu-query-replace-at-cursor-thing)
