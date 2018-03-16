@@ -1,4 +1,4 @@
-;;; Copyright (C) 2011-2017  Kouhei Sutou <kou@clear-code.com>
+;;; Copyright (C) 2011-2018  Kouhei Sutou <kou@clear-code.com>
 ;;; Copyright (C) 2015  Yasuyuki Tanaka <yasuyuki.tanaka@inf.ethz.ch>
 ;;;
 ;;; This program is free software: you can redistribute it and/or modify
@@ -217,6 +217,11 @@
 ;;; Meson
 ;; 2017-10-09
 (package-ensure-install 'meson-mode)
+
+
+;;; Lua
+;; 2018-03-16
+(package-ensure-install 'lua-mode)
 
 
 ;;; 追加の設定
