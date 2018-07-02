@@ -224,6 +224,12 @@
 (package-ensure-install 'lua-mode)
 
 
+;;; CP5022x
+;; 2018-07-02
+(package-ensure-install 'cp5022x)
+(require 'cp5022x)
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-15
