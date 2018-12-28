@@ -30,7 +30,7 @@
                       :foreground "white" :background "dark red")
   ;; 文字単位での変更箇所は色を反転して強調
   ;; 2012-04-02
-  (set-face-attribute 'diff-refine-change nil
+  (set-face-attribute 'diff-refine-changed nil
                       :foreground nil :background nil
                       :weight 'bold :inverse-video t))
 (add-hook 'diff-mode-hook 'diff-mode-setup-faces)
