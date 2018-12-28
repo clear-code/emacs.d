@@ -53,13 +53,13 @@
              "~/.emacs.d/config/el-get/local-recipes")
 
 
-;;; grep-edit
+;;; wgrep
 ;; *grep*で編集できるようにする
-(el-get 'sync '(grep-edit))
-(add-hook 'grep-setup-hook
-          (lambda ()
-            (define-key grep-mode-map
-              (kbd "C-c C-c") 'grep-edit-finish-edit)))
+(package-ensure-install 'wgrep)
+;; *grep*で"e"を押すと編集できる
+(setq wgrep-enable-key "e")
+;; 編集したら自動で保存する
+(setq wgrep-auto-save-buffer t)
 
 
 ;;; ポップアップ
