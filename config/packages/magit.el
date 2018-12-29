@@ -17,7 +17,7 @@
 ;;; Magit
 ;;; 2012-03-23
 
-(el-get 'sync '(magit))
+(package-ensure-install 'magit)
 
 ;; コミットメッセージをHelmで挿入できるようにする
 (defvar helm-c-source-git-commit-messages

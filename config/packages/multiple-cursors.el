@@ -17,7 +17,7 @@
 ;;; 複数箇所を同時に編集する
 ;;; 2012-12-05
 
-(el-get 'sync '(multiple-cursors))
+(package-ensure-install 'multiple-cursors)
 
 (define-key global-map (kbd "C-[ M-C-e") 'mc/edit-lines)
 

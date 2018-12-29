@@ -35,24 +35,6 @@
     (package-install name)))
 
 
-;;; el-get
-;; 複数のソースからパッケージをインストールできるパッケージ管理システム
-;; 2012-03-15
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
-(unless (require 'el-get nil t)
-  (with-current-buffer
-      (url-retrieve-synchronously
-       "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
-    (end-of-buffer)
-    (eval-print-last-sexp)))
-;; レシピ置き場
-(add-to-list 'el-get-recipe-path
-             (concat (file-name-directory load-file-name) "/el-get/recipes"))
-;; 追加のレシピ置き場
-(add-to-list 'el-get-recipe-path
-             "~/.emacs.d/config/el-get/local-recipes")
-
-
 ;;; wgrep
 ;; *grep*で編集できるようにする
 (package-ensure-install 'wgrep)
@@ -64,12 +46,12 @@
 
 ;;; ポップアップ
 ;; 2012-03-16
-(el-get 'sync '(popup))
+(package-ensure-install 'popup)
 
 
 ;;; Auto Complete
 ;; 自動補完
-(el-get 'sync '(auto-complete))
+(package-ensure-install 'auto-complete)
 (add-hook 'auto-complete-mode-hook
           (lambda ()
             (define-key ac-completing-map (kbd "C-n") 'ac-next)
@@ -79,7 +61,7 @@
 ;;; Helm
 ;; 2014-06-20
 ;; iswitchbの代わり
-(el-get 'sync '(helm))
+(package-ensure-install 'helm)
 (require 'helm-config)
 (setq helm-command-prefix-key "C-c C-<SPC>")
 (require 'helm)
@@ -108,12 +90,12 @@
 
 ;;; rabbit-mode
 ;; 2012-03-16
-(el-get 'sync '(rabbit-mode))
+;; (el-get 'sync '(rabbit-mode))
 
 
 ;;; run-test
 ;; テスト実行
-(el-get 'sync '(run-test))
+;; (el-get 'sync '(run-test))
 
 
 ;;; Magit
@@ -122,40 +104,34 @@
     (load "config/packages/magit"))
 
 
-;;; rst-mode
-;; reStructuredText編集用のモード
-;; 2012-03-24
-(el-get 'sync '(rst-mode))
-
-
 ;;; textile-mode
 ;; Textile編集用のモード
 ;; 2012-04-11
-(el-get 'sync '(textile-mode))
+(package-ensure-install 'textile-mode)
 
 
-;;; coffe-mode
+;;; coffee-mode
 ;; CoffeeScript編集用のモード
 ;; 2012-04-04
-(el-get 'sync '(coffee-mode))
+(package-ensure-install 'coffee-mode)
 
 
 ;;; less-css-mode
 ;; LESS編集用のモード
 ;; 2012-09-23
-(el-get 'sync '(less-css-mode))
+(package-ensure-install 'less-css-mode)
 
 
 ;;; Milkode
 ;; ソースコード検索エンジン
 ;; 2012-09-28
-(el-get 'sync '(milkode))
+(package-ensure-install 'milkode)
 
 
 ;;; markdown-mode
 ;; Markdown編集用のモード
 ;; 2012-10-15
-(el-get 'sync '(markdown-mode))
+(package-ensure-install 'markdown-mode)
 
 
 ;;; expand-region
@@ -186,7 +162,7 @@
 
 ;;; yaml-mode
 ;; 2014-09-26
-(el-get 'sync '(yaml-mode))
+(package-ensure-install 'yaml-mode)
 
 
 ;;; EditorConfig
