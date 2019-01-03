@@ -38,8 +38,8 @@
 ;;; wgrep
 ;; *grep*で編集できるようにする
 (package-ensure-install 'wgrep)
-;; *grep*で"e"を押すと編集できる
-(setq wgrep-enable-key "e")
+;; *grep*で"r"を押すと編集できる（Diredと同じ）
+(setq wgrep-enable-key "r")
 ;; 編集したら自動で保存する
 (setq wgrep-auto-save-buffer t)
 
