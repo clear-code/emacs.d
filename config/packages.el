@@ -206,6 +206,11 @@
 (require 'cp5022x)
 
 
+;;; PHP
+;; 2019-02-07
+(package-ensure-install 'php-mode)
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-15
