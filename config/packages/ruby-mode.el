@@ -16,6 +16,16 @@
 ;;; ruby-mode
 ;;; 2012-03-15
 
+;; エンコーディング用のマジックコメントを追加しない。
+;; 基本的に有用だけどutf-8のときも追加するので無効にする。
+;; 2019-02-27
+(setq ruby-insert-encoding-magic-comment nil)
+
+;; エンコーディング用のマジックコメントにはEmacsでも認識できるフォーマッ
+;; トを使う。
+;; 2019-02-27
+(setq ruby-encoding-magic-comment-style 'emacs)
+
 ;; Emacsにバンドルされているruby-modeにはC-c C-eでendを挿入する機能が
 ;; なくなっているので、その機能だけ別途追加する。
 ;; 2014-10-28
