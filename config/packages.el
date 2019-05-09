@@ -66,7 +66,7 @@
 (setq helm-command-prefix-key "C-c C-<SPC>")
 (require 'helm)
 (define-key global-map (kbd "C-x b") 'helm-for-files)
-(define-key global-map (kbd "C-x g") 'helm-semantic-or-imenu)
+(define-key global-map (kbd "C-x j") 'helm-semantic-or-imenu)
 (define-key global-map (kbd "M-y") 'helm-show-kill-ring)
 (define-key global-map (kbd "C-x 8") 'helm-ucs)
 (define-key helm-map (kbd "C-z") nil)
