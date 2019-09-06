@@ -216,6 +216,11 @@
 (package-ensure-install 'csharp-mode)
 
 
+;;; PowerShell
+;; 2019-09-06
+(package-ensure-install 'powershell)
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-15
