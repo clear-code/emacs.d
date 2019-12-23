@@ -187,7 +187,7 @@
 
 ;;; ESS
 ;; 2017-05-17
-(package-ensure-install 'ess)
+(load "config/packages/ess")
 
 
 ;;; Meson
