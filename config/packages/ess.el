@@ -17,6 +17,16 @@
 ;; 2017-05-17
 
 (package-ensure-install 'scss-mode)
+
 ;; RStudioと同じスタイルを使う。
 ;; 2019-12-23
 (setq ess-default-style 'RStudio)
+
+(add-hook 'ess-mode-hook
+          (lambda ()
+            ;; _で<-を挿入する機能を無効にする。
+            ;; 2019-12-24
+            (define-key ess-mode-map "_" nil)
+            ;; M-?はhelp-for-helpに使っているので無効にする。
+            ;; 2019-12-24
+            (define-key ess-mode-map "\M-?" nil)))
