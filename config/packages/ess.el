@@ -27,6 +27,8 @@
             ;; _で<-を挿入する機能を無効にする。
             ;; 2019-12-24
             (define-key ess-mode-map "_" nil)
+            (define-key inferior-ess-mode-map "_" nil)
             ;; M-?はhelp-for-helpに使っているので無効にする。
             ;; 2019-12-24
-            (define-key ess-mode-map "\M-?" nil)))
+            (define-key ess-mode-map "\M-?" nil)
+            (define-key inferior-ess-mode-map "_" nil)))
