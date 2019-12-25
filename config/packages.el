@@ -131,7 +131,7 @@
 ;;; markdown-mode
 ;; Markdown編集用のモード
 ;; 2012-10-15
-(package-ensure-install 'markdown-mode)
+(load "config/packages/markdown-mode")
 
 
 ;;; expand-region
