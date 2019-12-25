@@ -190,6 +190,11 @@
 (load "config/packages/ess")
 
 
+;;; poly-R
+;; 2019-12-25
+(package-ensure-install 'poly-R)
+
+
 ;;; Meson
 ;; 2017-10-09
 (package-ensure-install 'meson-mode)
