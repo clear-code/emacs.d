@@ -30,5 +30,9 @@
             (define-key inferior-ess-mode-map "_" nil)
             ;; M-?はhelp-for-helpに使っているので無効にする。
             ;; 2019-12-24
-            (define-key ess-mode-map "\M-?" nil)
-            (define-key inferior-ess-mode-map "_" nil)))
+            (define-key ess-mode-map (kbd "M-?") nil)
+            (define-key inferior-ess-mode-map (kbd "M-?") nil)
+            ;; C-c C-iはdeprecatedだしhippie-expandに使っているので無効にする。
+            ;; 2019-12-25
+            (define-key ess-mode-map (kbd "C-c C-i") nil)
+            (define-key inferior-ess-mode-map (kbd "C-c C-i") nil)))
