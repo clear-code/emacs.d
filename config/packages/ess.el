@@ -16,7 +16,7 @@
 ;;; ESS
 ;; 2017-05-17
 
-(package-ensure-install 'scss-mode)
+(package-ensure-install 'ess)
 
 ;; RStudioと同じスタイルを使う。
 ;; 2019-12-23
