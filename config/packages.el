@@ -1,4 +1,4 @@
-;;; Copyright (C) 2011-2018  Kouhei Sutou <kou@clear-code.com>
+;;; Copyright (C) 2011-2020  Kouhei Sutou <kou@clear-code.com>
 ;;; Copyright (C) 2015  Yasuyuki Tanaka <yasuyuki.tanaka@inf.ethz.ch>
 ;;;
 ;;; This program is free software: you can redistribute it and/or modify
@@ -224,6 +224,11 @@
 ;;; PowerShell
 ;; 2019-09-06
 (package-ensure-install 'powershell)
+
+
+;;; Qt
+;; 2020-02-23
+(load "config/packages/qt")
 
 
 ;;; 追加の設定
