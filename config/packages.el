@@ -231,6 +231,11 @@
 (load "config/packages/qt")
 
 
+;;; NSIS
+;; 2020-07-20
+(package-ensure-install 'nsis-mode)
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-15
