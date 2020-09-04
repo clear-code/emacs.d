@@ -21,7 +21,7 @@
 
 ;; MELPAからもインストールする。
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/")
+             '("melpa" . "https://melpa.org/packages/")
              t)
 ;; 初期化。
 (package-initialize)
