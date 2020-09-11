@@ -236,6 +236,11 @@
 (package-ensure-install 'nsis-mode)
 
 
+;;; Protocol Buffers
+;; 2020-09-11
+(package-ensure-install 'protobuf-mode)
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-15
