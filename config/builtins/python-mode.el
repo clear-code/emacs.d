@@ -1,4 +1,4 @@
-;;; Copyright (C) 2011-2020  Sutou Kouhei <kou@clear-code.com>
+;;; Copyright (C) 2020  Sutou Kouhei <kou@clear-code.com>
 ;;;
 ;;; This program is free software: you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
@@ -13,46 +13,10 @@
 ;;; You should have received a copy of the GNU General Public License
 ;;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-;;; dired
-(load "config/builtins/dired")
-
-
-;;; flyspell-mode
-;;; 2011-03-09
-(load "config/builtins/flyspell-mode")
-
-
-;;; diff-mode
-;;; 2012-04-02
-(load "config/builtins/diff-mode")
-
-
-;;; text-mode
-;; 2012-03-18
-(load "config/builtins/text-mode")
-
-
-;;; cc-mode
-;; 2012-03-18
-(load "config/builtins/cc-mode")
-
-
-;;; emacs-lisp-mode
-;; 2012-03-18
-(load "config/builtins/emacs-lisp-mode")
-
-
-;;; Semantic
-;; 2014-05-06
-(load "config/builtins/semantic")
-
-
 ;;; python-mode
 ;; 2020-09-11
-(load "config/builtins/python-mode")
 
-
-;;; 追加の設定
-;; 個別の設定があったら読み込む
-;; 2012-03-18
-(load "config/builtins/local" t)
+;; python3があるならpython3を使う
+;; 2020-09-11
+(if (executable-find "python3")
+    (setq python-shell-interpreter "python3"))
