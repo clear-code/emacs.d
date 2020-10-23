@@ -241,6 +241,11 @@
 (package-ensure-install 'protobuf-mode)
 
 
+;;; Cython
+;; 2020-10-23
+(package-ensure-install 'cython-mode)
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-15
