@@ -243,7 +243,7 @@
 
 ;;; Cython
 ;; 2020-10-23
-(package-ensure-install 'cython-mode)
+(load "config/packages/cython-mode")
 
 
 ;;; 追加の設定
