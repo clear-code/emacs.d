@@ -246,6 +246,11 @@
 (load "config/packages/cython-mode")
 
 
+;;; Org mode
+;; 2021-01-29
+(load "config/packages/org-mode")
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-15
