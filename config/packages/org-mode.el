@@ -16,6 +16,15 @@
 ;;; Org mode
 ;;; 2021-01-29
 
+;;; pandocでPDFを生成する設定
+;;; 2021-01-29
 (package-ensure-install 'ox-pandoc)
-
 (setq org-pandoc-options-for-latex-pdf '((pdf-engine . "xelatex")))
+
+;;; デフォルトで行を折り返す
+;;; 2021-04-06
+(setq org-startup-truncated nil)
+
+;;; デフォルトで展開する
+;;; 2021-04-06
+(setq org-startup-folded nil)
