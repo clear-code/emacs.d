@@ -37,7 +37,7 @@
 ;;; キーバインド
 ;; C-hでバックスペース
 ;; 2012-03-18
-(keyboard-translate ?\C-h ?\C-?)
+(define-key key-translation-map [?\C-h] [?\C-?])
 ;; 基本
 (define-key global-map (kbd "M-?") 'help-for-help)        ; ヘルプ
 (define-key global-map (kbd "C-z") 'undo)                 ; undo
