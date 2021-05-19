@@ -39,7 +39,11 @@
                                    ;; クラス定義
                                    (class-open after)
                                    ;; クラス定義内のインラインメソッド定義
-                                   (inline-open after)))
+                                   (inline-open after)
+                                   ;; デフォルト設定も使う
+                                   ,@(cdr (assoc
+                                           'c-hanging-braces-alist
+                                           c-fallback-style))))
         ,@c-style-2-spaces))
 ;; スタイルを登録する。
 (setq c-style-alist
