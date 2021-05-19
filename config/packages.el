@@ -167,7 +167,7 @@
 
 ;;; EditorConfig
 ;; 2014-10-21
-(package-ensure-install 'editorconfig)
+(load "config/packages/editorconfig")
 
 
 ;;; scss-mode
