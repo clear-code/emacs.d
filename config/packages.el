@@ -251,6 +251,11 @@
 (load "config/packages/org-mode")
 
 
+;;; Ivy mode
+;; 2022-03-28
+(load "config/packages/ivy-mode")
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-15
