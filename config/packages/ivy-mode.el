@@ -41,3 +41,8 @@
 ;; もろもろにCounselを使う。
 ;; 2022-03-31
 (counsel-mode 1)
+
+;; Ivyの表示をリッチにする。
+;; 2022-03-31
+(package-ensure-install 'ivy-rich)
+(ivy-rich-mode 1)
