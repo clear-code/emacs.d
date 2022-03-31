@@ -38,6 +38,6 @@
 ;; 2022-03-28
 (global-set-key (kbd "C-x b") 'ivy-switch-buffer)
 
-;; M-xにCounselを使う。
-;; 2022-03-28
-(global-set-key (kbd "M-x") 'counsel-M-x)
+;; もろもろにCounselを使う。
+;; 2022-03-31
+(counsel-mode 1)
