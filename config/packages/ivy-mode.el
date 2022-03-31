@@ -29,6 +29,14 @@
 (setq ivy-count-format "(%d/%d) ")
 
 
+;; もろもろにIvyを使う。
+;; 2022-03-31
+(ivy-mode 1)
+
+;; もろもろにCounselを使う。
+;; 2022-03-31
+(counsel-mode 1)
+
 ;; isearchの代わりにSwiperを使う。
 ;; 2022-03-28
 (global-set-key (kbd "C-s") 'swiper-isearch)
@@ -37,10 +45,6 @@
 ;; switch-bufferにIvyを使う。
 ;; 2022-03-28
 (global-set-key (kbd "C-x b") 'ivy-switch-buffer)
-
-;; もろもろにCounselを使う。
-;; 2022-03-31
-(counsel-mode 1)
 
 ;; Ivyの表示をリッチにする。
 ;; 2022-03-31
