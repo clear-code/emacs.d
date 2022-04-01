@@ -58,24 +58,6 @@
             (define-key ac-completing-map (kbd "C-p") 'ac-previous)))
 
 
-;;; Helm
-;; 2014-06-20
-;; iswitchbの代わり
-(package-ensure-install 'helm)
-(require 'helm-config)
-(setq helm-command-prefix-key "C-c C-<SPC>")
-(require 'helm)
-(define-key global-map (kbd "C-x b") 'helm-for-files)
-(define-key global-map (kbd "C-x j") 'helm-semantic-or-imenu)
-(define-key global-map (kbd "M-y") 'helm-show-kill-ring)
-(define-key global-map (kbd "C-x 8") 'helm-ucs)
-(define-key helm-map (kbd "C-z") nil)
-(define-key helm-map (kbd "C-l") 'helm-execute-persistent-action)
-(define-key helm-map (kbd "C-o") nil)
-(define-key helm-map (kbd "C-M-n") 'helm-next-source)
-(define-key helm-map (kbd "C-M-p") 'helm-previous-source)
-
-
 ;;; Migemo
 ;; ローマ字で日本語をインクリメンタルサーチする。
 ;; 2012-03-19
