@@ -35,6 +35,11 @@
     (package-install name)))
 
 
+;;; Flycheck
+;; 2022-04-01
+(package-ensure-install 'flycheck)
+
+
 ;;; wgrep
 ;; *grep*で編集できるようにする
 (package-ensure-install 'wgrep)
