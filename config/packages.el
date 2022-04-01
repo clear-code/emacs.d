@@ -243,6 +243,11 @@
 (load "config/packages/ivy-mode")
 
 
+;;; LSP mode
+;; 2022-04-01
+(load "config/packages/lsp-mode")
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-15
