@@ -248,6 +248,11 @@
 (load "config/packages/lsp-mode")
 
 
+;;; Vala
+;; 2022-04-25
+(package-ensure-install 'vala-mode)
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-15
