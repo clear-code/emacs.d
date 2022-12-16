@@ -253,6 +253,11 @@
 (package-ensure-install 'vala-mode)
 
 
+;;; Debian
+;; 2022-12-16
+(package-ensure-install 'dpkg-dev-el)
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-15
