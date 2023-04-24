@@ -263,6 +263,12 @@
 (setq ring-bell-function 'ignore)
 
 
+;;; 警告
+;; 非同期ネイティブコンパイル時の警告をポップアップしない。
+;; 2023-04-24
+(setq native-comp-async-report-warnings-errors 'silent)
+
+
 ;;; 追加の設定
 ;; 標準Elispの設定
 (load "config/builtins")
