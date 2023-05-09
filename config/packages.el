@@ -196,6 +196,8 @@
 ;; 2018-07-02
 (package-ensure-install 'cp5022x)
 (require 'cp5022x)
+(coding-system-put 'iso-2022-jp :decode-translation-table
+                   '(cp51932-decode japanese-ucs-cp932-to-jis-map))
 
 
 ;;; PHP
