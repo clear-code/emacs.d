@@ -245,6 +245,11 @@
 (load "config/packages/ivy-mode")
 
 
+;;; CMake mode
+;; 2023-05-11
+(package-ensure-install 'cmake-mode)
+
+
 ;;; LSP mode
 ;; 2022-04-01
 (load "config/packages/lsp-mode")
