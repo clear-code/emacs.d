@@ -205,11 +205,6 @@
 (package-ensure-install 'php-mode)
 
 
-;;; C#
-;; 2019-04-04
-(package-ensure-install 'csharp-mode)
-
-
 ;;; PowerShell
 ;; 2019-09-06
 (package-ensure-install 'powershell)
