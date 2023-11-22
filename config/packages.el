@@ -260,6 +260,11 @@
 (package-ensure-install 'dpkg-dev-el)
 
 
+;;; TypeScript mode
+;; 2023-11-22
+(package-ensure-install 'typescript-mode)
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-15
