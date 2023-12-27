@@ -176,15 +176,6 @@
 ;; 補完時に大文字小文字を区別しない
 (setq completion-ignore-case t)
 (setq read-file-name-completion-ignore-case t)
-;; 部分一致の補完機能を使う
-;; p-bでprint-bufferとか
-;; 2012-08-08
-;; Emacs 24ではデフォルトで有効になっていて、`partial-completion-mode'は
-;; なくなっている。カスタマイズする場合は以下の変数を変更する。
-;;   * `completion-styles'
-;;   * `completion-pcm-complete-word-inserts-delimiters'
-(if (fboundp 'partial-completion-mode)
-    (partial-completion-mode t))
 ;; 補完可能なものを随時表示
 ;; 少しうるさい
 (icomplete-mode 1)
