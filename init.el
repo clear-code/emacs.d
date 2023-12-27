@@ -177,7 +177,6 @@
 (setq completion-ignore-case t)
 (setq read-file-name-completion-ignore-case t)
 ;; 補完可能なものを随時表示
-;; 少しうるさい
 (icomplete-mode 1)
 ;; 補完候補を縦に表示
 ;; 2023-12-27
