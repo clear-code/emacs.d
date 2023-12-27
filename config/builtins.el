@@ -57,6 +57,11 @@
 (load "config/builtins/eglot")
 
 
+;; Modus themes
+;; 2023-12-27
+(load "config/builtins/modus-themes")
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-18
