@@ -255,6 +255,12 @@
 (package-ensure-install 'typescript-mode)
 
 
+;;; highlight-parentheses
+;; 2023-12-27
+(package-ensure-install 'highlight-parentheses)
+(global-highlight-parentheses-mode t)
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-15
