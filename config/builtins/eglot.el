@@ -1,4 +1,4 @@
-;;; Copyright (C) 2022  Sutou Kouhei <kou@clear-code.com>
+;;; Copyright (C) 2023  Sutou Kouhei <kou@clear-code.com>
 ;;;
 ;;; This program is free software: you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
@@ -13,14 +13,9 @@
 ;;; You should have received a copy of the GNU General Public License
 ;;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-;;; LSP mode
-;;; 2022-04-01
+;;; Eglot
+;;; 2023-12-27
 
-(setq lsp-keymap-prefix "C-c l")
-(package-ensure-install 'lsp-mode)
-(package-ensure-install 'lsp-ui)
-(package-ensure-install 'lsp-ivy)
-
-(add-hook 'c-mode-hook #'lsp)
-(add-hook 'c++-mode-hook #'lsp)
-(add-hook 'cmake-mode-hook #'lsp)
+(add-hook 'c-mode-hook #'eglot-ensure)
+(add-hook 'c++-mode-hook #'eglot-ensure)
+(add-hook 'cmake-mode-hook #'eglot-ensure)

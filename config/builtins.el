@@ -1,4 +1,4 @@
-;;; Copyright (C) 2011-2020  Sutou Kouhei <kou@clear-code.com>
+;;; Copyright (C) 2011-2023  Sutou Kouhei <kou@clear-code.com>
 ;;;
 ;;; This program is free software: you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
@@ -50,6 +50,11 @@
 ;;; python-mode
 ;; 2020-09-11
 (load "config/builtins/python-mode")
+
+
+;; Eglot
+;; 2023-12-27
+(load "config/builtins/eglot")
 
 
 ;;; 追加の設定

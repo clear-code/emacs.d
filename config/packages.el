@@ -245,11 +245,6 @@
 (package-ensure-install 'cmake-mode)
 
 
-;;; LSP mode
-;; 2022-04-01
-(load "config/packages/lsp-mode")
-
-
 ;;; Vala
 ;; 2022-04-25
 (package-ensure-install 'vala-mode)
