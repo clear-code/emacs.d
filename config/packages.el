@@ -235,11 +235,6 @@
 (load "config/packages/org-mode")
 
 
-;;; Ivy mode
-;; 2022-03-28
-(load "config/packages/ivy-mode")
-
-
 ;;; CMake mode
 ;; 2023-05-11
 (package-ensure-install 'cmake-mode)

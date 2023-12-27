@@ -1,4 +1,4 @@
-;;; Copyright (C) 2011-2017  Kouhei Sutou <kou@clear-code.com>
+;;; Copyright (C) 2011-2023  Sutou Kouhei <kou@clear-code.com>
 ;;;
 ;;; This program is free software: you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
@@ -188,6 +188,9 @@
 ;; 補完可能なものを随時表示
 ;; 少しうるさい
 (icomplete-mode 1)
+;; 補完候補を縦に表示
+;; 2023-12-27
+(fido-vertical-mode 1)
 
 
 ;;; 履歴
