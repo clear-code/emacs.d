@@ -60,6 +60,9 @@
 (define-key global-map (kbd "C-M-n") 'next-multiframe-window)
 ;; 前のウィンドウへ移動
 (define-key global-map (kbd "C-M-p") 'previous-multiframe-window)
+;; 前にkillした内容を貼り付けるときはインタラクティブに検索する
+;; 2023-12-28
+(define-key global-map (kbd "M-y") 'isearch-yank-pop)
 ;; 定義へ移動
 ;; 2012-04-15
 ;; C-x F -> 関数定義へ移動
