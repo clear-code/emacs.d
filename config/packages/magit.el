@@ -31,10 +31,10 @@
                               (mapcar (lambda (raw-message)
                                         (string-strip raw-message))
                                       raw-messages)))
-         (message (completing-read
-                   "Insert a commit message from history"
-                   messages)))
-    (insert message)))
+         (target-message (completing-read
+                          "Insert a commit message from history: "
+                          messages)))
+    (insert target-message)))
 
 (defun magit-enable-insert-commit-message-from-history ()
   ;; 過去のコミットメッセージを挿入
