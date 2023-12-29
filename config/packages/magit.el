@@ -19,37 +19,28 @@
 
 (package-ensure-install 'magit)
 
-;; コミットメッセージをHelmで挿入できるようにする
-(defvar helm-c-source-git-commit-messages
-  '((name . "Git Commit Messages")
-    (candidates . helm-c-git-commit-messages-candidates)
-    (action . (("Insert" . (lambda (str) (insert str)))))
-    (migemo)
-    (multiline))
-  "Source for browsing and inserting commit messages.")
-
-(defun helm-c-git-commit-messages-candidates ()
-  (let* ((messages-string
-          (shell-command-to-string "\\git \\log -50 --format=\"%x00%B\""))
-         (raw-messages (string-to-list (split-string messages-string "\0")))
-         (messages (mapcar (lambda (raw-message)
-                             (string-strip raw-message))
-                           raw-messages)))
-    (remove-if (lambda (message)
-                 (string-equal message ""))
-               messages)))
-
-(defun helm-git-commit-messages ()
-  "`helm' for git commit messages."
+;; コミットメッセージを挿入する
+(defun magit-insert-commit-message-from-history ()
+  "insert a commit message from history."
   (interactive)
-  (helm-other-buffer 'helm-c-source-git-commit-messages
-                     "*helm commit messages*"))
+  (let* ((raw-messages-string
+          (shell-command-to-string "\\git log -50 --format=\"%x00%B\""))
+         (raw-messages (string-to-list (split-string raw-messages-string "\0")))
+         (messages (remove-if (lambda (message)
+                                (string-equal message ""))
+                              (mapcar (lambda (raw-message)
+                                        (string-strip raw-message))
+                                      raw-messages)))
+         (message (completing-read
+                   "Insert a commit message from history"
+                   messages)))
+    (insert message)))
 
-(defun magit-enable-helm ()
+(defun magit-enable-insert-commit-message-from-history ()
   ;; 過去のコミットメッセージを挿入
   (define-key git-commit-mode-map
-    (kbd "C-c i") 'helm-git-commit-messages))
-(add-hook 'magit-mode-hook 'magit-enable-helm)
+    (kbd "C-c i") 'magit-insert-commit-message-from-history))
+(add-hook 'magit-mode-hook 'magit-enable-insert-commit-message-from-history)
 
 ;; diff関連の設定
 ;; 2012-04-02
