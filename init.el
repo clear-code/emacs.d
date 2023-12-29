@@ -178,6 +178,9 @@
 (setq read-file-name-completion-ignore-case t)
 ;; 補完可能なものを随時表示
 (icomplete-mode 1)
+;; 補完候補の詳細も表示
+;; 2023-12-29
+(setq completions-detailed t)
 ;; 補完候補を縦に表示
 ;; 2023-12-27
 (fido-vertical-mode 1)
