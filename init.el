@@ -93,6 +93,9 @@
     (car grep-command)))
 (setq grep-command (cons (concat grep-command-before-query " .")
                          (+ (length grep-command-before-query) 1)))
+;; 表示済みエントリーをハイライト
+;; 2023-12-31
+(setq next-error-message-highlight 'keep)
 
 
 ;;; 画像
