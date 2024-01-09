@@ -261,6 +261,11 @@
 (global-highlight-parentheses-mode t)
 
 
+;;; Swift mode
+;; 2024-01-10
+(package-ensure-install 'swift-mode)
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-15
