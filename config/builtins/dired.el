@@ -29,14 +29,14 @@
            (magit-status (file-name-directory path)))
           ((string-match-p "\\.hg$" path)
            (monky-status (file-name-directory path))))))
-(define-key dired-mode-map "V" 'dired-vc-status)
+(keymap-set dired-mode-map "V" 'dired-vc-status)
 
 ;; グローバルにバインドしているC-M-nとC-M-pを使えるようにする
 ;; 2014-09-04
 (defun dired-disable-move-subdir-key-bindings ()
   (let ((map dired-mode-map))
-    (define-key map (kbd "C-M-n") nil)
-    (define-key map (kbd "C-M-p") nil)))
+    (keymap-set map "C-M-n" nil)
+    (keymap-set map "C-M-p" nil)))
 
 (add-hook 'dired-mode-hook
           '(lambda ()

@@ -59,8 +59,8 @@
 (package-ensure-install 'auto-complete)
 (add-hook 'auto-complete-mode-hook
           (lambda ()
-            (define-key ac-completing-map (kbd "C-n") 'ac-next)
-            (define-key ac-completing-map (kbd "C-p") 'ac-previous)))
+            (keymap-set ac-completing-map "C-n" 'ac-next)
+            (keymap-set ac-completing-map "C-p" 'ac-previous)))
 
 
 ;;; Migemo

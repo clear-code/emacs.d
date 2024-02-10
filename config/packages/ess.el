@@ -26,25 +26,25 @@
           (lambda ()
             ;; _で<-を挿入する機能を無効にする。
             ;; 2019-12-24
-            (define-key ess-mode-map "_" nil)
+            (keymap-set ess-mode-map "_" nil)
             ;; C-c C-iはdeprecatedだしhippie-expandに使っているので無効にする。
             ;; 2019-12-25
-            (define-key ess-mode-map (kbd "C-c C-i") nil)))
+            (keymap-set ess-mode-map "C-c C-i" nil)))
 
 (add-hook 'ess-r-mode-hook
           (lambda ()
             ;; M-?はhelp-for-helpに使っているので無効にする。
             ;; 2020-01-20
-            (define-key ess-r-mode-map (kbd "M-?") nil)))
+            (keymap-set ess-r-mode-map "M-?" nil)))
 
 (add-hook 'inferior-ess-mode-hook
           (lambda ()
             ;; _で<-を挿入する機能を無効にする。
             ;; 2019-12-24
-            (define-key inferior-ess-mode-map "_" nil)
+            (keymap-set inferior-ess-mode-map "_" nil)
             ;; M-?はhelp-for-helpに使っているので無効にする。
             ;; 2019-12-24
-            (define-key inferior-ess-mode-map (kbd "M-?") nil)
+            (keymap-set inferior-ess-mode-map "M-?" nil)
             ;; C-c C-iはdeprecatedだしhippie-expandに使っているので無効にする。
             ;; 2019-12-25
-            (define-key inferior-ess-mode-map (kbd "C-c C-i") nil)))
+            (keymap-set inferior-ess-mode-map "C-c C-i" nil)))

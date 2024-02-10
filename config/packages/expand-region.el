@@ -19,4 +19,4 @@
 
 (package-ensure-install 'expand-region)
 
-(define-key global-map (kbd "C-=") 'er/expand-region)
+(keymap-set global-map (kbd "C-=") 'er/expand-region)
