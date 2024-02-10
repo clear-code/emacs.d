@@ -28,4 +28,4 @@
     (load-library "uim-var")))
 (setq uim-candidate-display-frame t)
 (setq uim-candidate-display-inline t)
-(define-key global-map "\C-o" 'uim-mode-force-on)
+(keymap-set global-map "\C-o" 'uim-mode-force-on)

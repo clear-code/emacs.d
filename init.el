@@ -39,27 +39,27 @@
 ;; 2012-03-18
 (define-key key-translation-map [?\C-h] [?\C-?])
 ;; 基本
-(define-key global-map (kbd "M-?") 'help-for-help)        ; ヘルプ
-(define-key global-map (kbd "C-z") 'undo)                 ; undo
+(keymap-set global-map "M-?" 'help-for-help)        ; ヘルプ
+(keymap-set global-map "C-z" 'undo)                 ; undo
 ;; 2016-05-06
-(define-key global-map (kbd "C-x C-z") 'repeat)           ; 繰り返し
-(define-key global-map (kbd "C-c C-i") 'hippie-expand)    ; 補完
-(define-key global-map (kbd "C-c ;") 'comment-dwim)       ; コメントアウト
-(define-key global-map (kbd "M-C-g") 'grep)               ; grep
-(define-key global-map (kbd "C-[ M-C-g") 'goto-line)      ; 指定行へ移動
+(keymap-set global-map "C-x C-z" 'repeat)           ; 繰り返し
+(keymap-set global-map "C-c C-i" 'hippie-expand)    ; 補完
+(keymap-set global-map "C-c ;" 'comment-dwim)       ; コメントアウト
+(keymap-set global-map "M-C-g" 'grep)               ; grep
+(keymap-set global-map "C-[ M-C-g" 'goto-line)      ; 指定行へ移動
 ;; 2014-08-31
-(define-key global-map (kbd "C-[ M-C-a") 'align)          ; 整形
+(keymap-set global-map "C-[ M-C-a" 'align)          ; 整形
 ;; 2016-05-06
-(define-key global-map (kbd "C-x C-`") 'next-error)       ; 次のエラーへ
+(keymap-set global-map "C-x C-`" 'next-error)       ; 次のエラーへ
 ;; C-x uでポイント上にあるURLを開く
 ;; 2014-05-18
-(define-key global-map (kbd "C-x u") 'browse-url-at-point)
+(keymap-set global-map "C-x u" 'browse-url-at-point)
 ;; ウィンドウ移動
 ;; 2011-02-17
 ;; 次のウィンドウへ移動
-(define-key global-map (kbd "C-M-n") 'next-multiframe-window)
+(keymap-set global-map "C-M-n" 'next-multiframe-window)
 ;; 前のウィンドウへ移動
-(define-key global-map (kbd "C-M-p") 'previous-multiframe-window)
+(keymap-set global-map "C-M-p" 'previous-multiframe-window)
 ;; 定義へ移動
 ;; 2012-04-15
 ;; C-x F -> 関数定義へ移動
@@ -71,7 +71,7 @@
 ;; 連続で入力してインデントされる方が便利なので同じ使い勝手を実現する
 ;; 2014-11-06
 (if (boundp 'indent-rigidly-map)
-    (define-key indent-rigidly-map (kbd "C-x TAB") 'indent-rigidly-right))
+    (keymap-set indent-rigidly-map "C-x TAB" 'indent-rigidly-right))
 
 
 ;;; grep
@@ -215,7 +215,7 @@
 (require 'dired-x)
 ;; diredから"r"でファイル名をインライン編集する
 (require 'wdired)
-(define-key dired-mode-map "r" 'wdired-change-to-wdired-mode)
+(keymap-set dired-mode-map "r" 'wdired-change-to-wdired-mode)
 
 
 ;;; バッファ名

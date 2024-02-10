@@ -43,9 +43,9 @@
             ;; ruby-beginning-of-blockとruby-end-of-blockが
             ;; 上書きしてしまうので無効にする。
             ;; 2012-07-11
-            (define-key ruby-mode-map (kbd "C-M-p") nil)
-            (define-key ruby-mode-map (kbd "C-M-n") nil)
+            (keymap-set ruby-mode-map "C-M-p" nil)
+            (keymap-set ruby-mode-map "C-M-n" nil)
 
             ;; C-c C-eで「end」を挿入する
             ;; 2014-10-28
-            (define-key ruby-mode-map (kbd "C-C C-e") 'ruby-insert-end)))
+            (keymap-set ruby-mode-map "C-C C-e" 'ruby-insert-end)))
