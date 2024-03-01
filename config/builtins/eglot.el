@@ -16,6 +16,11 @@
 ;;; Eglot
 ;;; 2023-12-27
 
+;;; Performance Tuning
+;;; https://www.gnu.org/software/emacs/manual/html_node/eglot/Performance.html
+(with-eval-after-load 'eglot
+  (setq eglot-events-buffer-size 0))
+
 (add-hook 'c-mode-hook #'eglot-ensure)
 (add-hook 'c++-mode-hook #'eglot-ensure)
 (add-hook 'cmake-mode-hook #'eglot-ensure)
