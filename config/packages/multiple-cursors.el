@@ -19,8 +19,8 @@
 
 (package-ensure-install 'multiple-cursors)
 
-(keymap-set global-map "C-[ M-C-e" 'mc/edit-lines)
+(keymap-set global-map "C-[ C-M-e" 'mc/edit-lines)
 
-(keymap-set global-map "<C-right>" 'mc/mark-next-like-this)
-(keymap-set global-map "<C-left>" 'mc/mark-previous-like-this)
-(keymap-set global-map "<C-down>" 'mc/mark-all-like-this)
+(keymap-set global-map "C-<right>" 'mc/mark-next-like-this)
+(keymap-set global-map "C-<left>" 'mc/mark-previous-like-this)
+(keymap-set global-map "C-<down>" 'mc/mark-all-like-this)

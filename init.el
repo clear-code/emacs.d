@@ -45,10 +45,10 @@
 (keymap-set global-map "C-x C-z" 'repeat)           ; 繰り返し
 (keymap-set global-map "C-c C-i" 'hippie-expand)    ; 補完
 (keymap-set global-map "C-c ;" 'comment-dwim)       ; コメントアウト
-(keymap-set global-map "M-C-g" 'grep)               ; grep
-(keymap-set global-map "C-[ M-C-g" 'goto-line)      ; 指定行へ移動
+(keymap-set global-map "C-M-g" 'grep)               ; grep
+(keymap-set global-map "C-[ C-M-g" 'goto-line)      ; 指定行へ移動
 ;; 2014-08-31
-(keymap-set global-map "C-[ M-C-a" 'align)          ; 整形
+(keymap-set global-map "C-[ C-M-a" 'align)          ; 整形
 ;; 2016-05-06
 (keymap-set global-map "C-x C-`" 'next-error)       ; 次のエラーへ
 ;; C-x uでポイント上にあるURLを開く
