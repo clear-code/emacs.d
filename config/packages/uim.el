@@ -1,4 +1,4 @@
-;;; Copyright (C) 2011-2012  Kouhei Sutou <kou@clear-code.com>
+;;; Copyright (C) 2011-2025  Sutou Kouhei <kou@clear-code.com>
 ;;;
 ;;; This program is free software: you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by

@@ -1,4 +1,4 @@
-;;; Copyright (C) 2012-2015  Kouhei Sutou <kou@clear-code.com>
+;;; Copyright (C) 2012-2025  Sutou Kouhei <kou@clear-code.com>
 ;;; Copyright (C) 2012  yuta yamada <sleepboy.zzz@gmail.com>
 ;;;
 ;;; This program is free software: you can redistribute it and/or modify
@@ -16,8 +16,6 @@
 
 ;;; Magit
 ;;; 2012-03-23
-
-(package-ensure-install 'magit)
 
 ;; コミットメッセージを挿入する
 (defun magit-insert-commit-message-from-history ()
@@ -40,7 +38,6 @@
   ;; 過去のコミットメッセージを挿入
   (keymap-set git-commit-mode-map
     "C-c i" 'magit-insert-commit-message-from-history))
-(add-hook 'magit-mode-hook 'magit-enable-insert-commit-message-from-history)
 
 ;; diff関連の設定
 ;; 2012-04-02
@@ -49,7 +46,6 @@
   ;; 'allではなくtにすると現在選択中のhunkのみ強調表示する
   ;; 2012-04-02
   (setq magit-diff-refine-hunk 'all))
-(add-hook 'magit-mode-hook 'magit-setup-diff)
 
 ;; push関連の設定
 ;; 2015-08-17
@@ -58,4 +54,8 @@
   ;; pushするときは現在のブランチのみをpushする
   ;; 2015-08-17
   (setq magit-push-always-verify nil))
-(add-hook 'magit-mode-hook 'magit-setup-push)
+
+(use-package magit
+  :hook ((magit-mode . magit-enable-insert-commit-message-from-history)
+         (magit-mode . magit-setup-diff)
+         (magit-mode . magit-setup-push)))

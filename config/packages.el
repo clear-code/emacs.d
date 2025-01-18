@@ -1,4 +1,4 @@
-;;; Copyright (C) 2011-2020  Kouhei Sutou <kou@clear-code.com>
+;;; Copyright (C) 2011-2025  Sutou Kouhei <kou@clear-code.com>
 ;;; Copyright (C) 2015  Yasuyuki Tanaka <yasuyuki.tanaka@inf.ethz.ch>
 ;;;
 ;;; This program is free software: you can redistribute it and/or modify
@@ -14,53 +14,58 @@
 ;;; You should have received a copy of the GNU General Public License
 ;;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+;;; use-package
+;; デフォルトで(use-package :ensure t)にする。
+;; :ensure tにするとインストールされていなかったらインストールする。
+;; 2025-01-18
+(require 'use-package-ensure)
+(setq use-package-always-ensure t)
+
 ;;; package.el
 ;; Emacs標準のパッケージ管理システム
 ;; 2013-12-31
-(require 'package)
+(use-package package
+  :config
+  ;; MELPAからもインストールする。
+  (add-to-list 'package-archives
+               '("melpa" . "https://melpa.org/packages/")
+               t)
+  ;; 初期化。
+  (package-initialize)
+  ;; 初回起動時はパッケージリストを更新する。
+  (unless package-archive-contents
+    (package-refresh-contents)))
 
-;; MELPAからもインストールする。
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/")
-             t)
-;; 初期化。
-(package-initialize)
-;; 初回起動時はパッケージリストを更新する。
-(unless package-archive-contents
-  (package-refresh-contents))
-
-;; 便利関数。インストールされていなかったらインストールする。
-(defun package-ensure-install (name)
-  (unless (package-installed-p name)
-    (package-install name)))
 
 
 ;;; Flycheck
 ;; 2022-04-01
-(package-ensure-install 'flycheck)
+(use-package flycheck)
 
 
 ;;; wgrep
 ;; *grep*で編集できるようにする
-(package-ensure-install 'wgrep)
-;; *grep*で"r"を押すと編集できる（Diredと同じ）
-(setq wgrep-enable-key "r")
-;; 編集したら自動で保存する
-(setq wgrep-auto-save-buffer t)
+(use-package wgrep
+  :config
+  ;; *grep*で"r"を押すと編集できる（Diredと同じ）
+  (setq wgrep-enable-key "r")
+  ;; 編集したら自動で保存する
+  (setq wgrep-auto-save-buffer t))
 
 
 ;;; ポップアップ
 ;; 2012-03-16
-(package-ensure-install 'popup)
+(use-package popup)
 
 
 ;;; Auto Complete
 ;; 自動補完
-(package-ensure-install 'auto-complete)
-(add-hook 'auto-complete-mode-hook
-          (lambda ()
-            (keymap-set ac-completing-map "C-n" 'ac-next)
-            (keymap-set ac-completing-map "C-p" 'ac-previous)))
+(use-package auto-complete
+  :hook (auto-complete-mode
+         .
+         (lambda ()
+           (keymap-set ac-completing-map "C-n" 'ac-next)
+           (keymap-set ac-completing-map "C-p" 'ac-previous))))
 
 
 ;;; Migemo
@@ -68,11 +73,6 @@
 ;; 2012-03-19
 ;; インストールされていたら有効にする。
 (require 'migemo nil t)
-
-
-;;; ruby-mode
-;; 2012-03-15
-(load "config/packages/ruby-mode")
 
 
 ;;; rabbit-mode
@@ -87,32 +87,19 @@
 
 ;;; Magit
 ;; 2012-03-24
-(if (version<= "24.4.0" emacs-version)
-    (load "config/packages/magit"))
+(load "config/packages/magit")
 
 
 ;;; textile-mode
 ;; Textile編集用のモード
 ;; 2012-04-11
-(package-ensure-install 'textile-mode)
-
-
-;;; coffee-mode
-;; CoffeeScript編集用のモード
-;; 2012-04-04
-(package-ensure-install 'coffee-mode)
+(use-package textile-mode)
 
 
 ;;; less-css-mode
 ;; LESS編集用のモード
 ;; 2012-09-23
-(package-ensure-install 'less-css-mode)
-
-
-;;; Milkode
-;; ソースコード検索エンジン
-;; 2012-09-28
-(package-ensure-install 'milkode)
+(use-package less-css-mode)
 
 
 ;;; markdown-mode
@@ -136,20 +123,14 @@
 (load "config/packages/anzu")
 
 
-;;; Monky
-;; MagitのようなインターフェイスのMercurialクライアント
-;; 2014-02-15
-(package-ensure-install 'monky)
-
-
 ;;; go-mode
 ;; 2014-08-16
-(load "config/packages/go-mode")
+(use-package go-mode)
 
 
 ;;; yaml-mode
 ;; 2014-09-26
-(package-ensure-install 'yaml-mode)
+(use-package yaml-mode)
 
 
 ;;; EditorConfig
@@ -164,12 +145,12 @@
 
 ;;; rust-mode
 ;; 2017-03-16
-(package-ensure-install 'rust-mode)
+(use-package rust-mode)
 
 
 ;;; dockerfile-mode
 ;; 2017-04-08
-(package-ensure-install 'dockerfile-mode)
+(use-package dockerfile-mode)
 
 
 ;;; ESS
@@ -179,50 +160,50 @@
 
 ;;; poly-R
 ;; 2019-12-25
-(package-ensure-install 'poly-R)
+(use-package poly-R)
 
 
 ;;; Meson
 ;; 2017-10-09
-(package-ensure-install 'meson-mode)
+(use-package meson-mode)
 
 
 ;;; Lua
 ;; 2018-03-16
-(package-ensure-install 'lua-mode)
+(use-package lua-mode)
 
 
 ;;; CP5022x
 ;; 2018-07-02
-(package-ensure-install 'cp5022x)
-(require 'cp5022x)
-(coding-system-put 'iso-2022-jp :decode-translation-table
-                   '(cp51932-decode japanese-ucs-cp932-to-jis-map))
+(use-package cp5022x
+  :config
+  (coding-system-put 'iso-2022-jp :decode-translation-table
+                     '(cp51932-decode japanese-ucs-cp932-to-jis-map)))
 
 
 ;;; PHP
 ;; 2019-02-07
-(package-ensure-install 'php-mode)
+(use-package php-mode)
 
 
 ;;; PowerShell
 ;; 2019-09-06
-(package-ensure-install 'powershell)
+(use-package powershell)
 
 
 ;;; Qt
 ;; 2020-02-23
-(load "config/packages/qt")
+(use-package qml-mode)
 
 
 ;;; NSIS
 ;; 2020-07-20
-(package-ensure-install 'nsis-mode)
+(use-package nsis-mode)
 
 
 ;;; Protocol Buffers
 ;; 2020-09-11
-(package-ensure-install 'protobuf-mode)
+(use-package protobuf-mode)
 
 
 ;;; Cython
@@ -237,33 +218,34 @@
 
 ;;; CMake mode
 ;; 2023-05-11
-(package-ensure-install 'cmake-mode)
+(use-package cmake-mode)
 
 
 ;;; Vala
 ;; 2022-04-25
-(package-ensure-install 'vala-mode)
+(use-package vala-mode)
 
 
 ;;; Debian
 ;; 2022-12-16
-(package-ensure-install 'dpkg-dev-el)
+(use-package dpkg-dev-el)
 
 
 ;;; TypeScript mode
 ;; 2023-11-22
-(package-ensure-install 'typescript-mode)
+(use-package typescript-mode)
 
 
 ;;; highlight-parentheses
 ;; 2023-12-27
-(package-ensure-install 'highlight-parentheses)
-(global-highlight-parentheses-mode t)
+(use-package highlight-parentheses
+  :config
+  (global-highlight-parentheses-mode t))
 
 
 ;;; Swift mode
 ;; 2024-01-10
-(package-ensure-install 'swift-mode)
+(use-package swift-mode)
 
 
 ;;; 追加の設定

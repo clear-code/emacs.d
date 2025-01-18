@@ -1,4 +1,4 @@
-;;; Copyright (C) 2017-2019  Sutou Kouhei <kou@clear-code.com>
+;;; Copyright (C) 2017-2025  Sutou Kouhei <kou@clear-code.com>
 ;;;
 ;;; This program is free software: you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
@@ -16,13 +16,13 @@
 ;;; ESS
 ;; 2017-05-17
 
-(package-ensure-install 'ess)
-
-;; RStudioと同じスタイルを使う。
-;; 2019-12-23
-(setq ess-default-style 'RStudio)
-
-(add-hook 'ess-mode-hook
+(use-package ess
+  :config
+  ;; RStudioと同じスタイルを使う。
+  ;; 2019-12-23
+  (setq ess-default-style 'RStudio)
+  :hook ((ess-mode-hook
+          .
           (lambda ()
             ;; _で<-を挿入する機能を無効にする。
             ;; 2019-12-24
@@ -30,14 +30,14 @@
             ;; C-c C-iはdeprecatedだしhippie-expandに使っているので無効にする。
             ;; 2019-12-25
             (keymap-set ess-mode-map "C-c C-i" nil)))
-
-(add-hook 'ess-r-mode-hook
+         (ess-r-mode-hook
+          .
           (lambda ()
             ;; M-?はhelp-for-helpに使っているので無効にする。
             ;; 2020-01-20
             (keymap-set ess-r-mode-map "M-?" nil)))
-
-(add-hook 'inferior-ess-mode-hook
+         (inferior-ess-mode-hook
+          .
           (lambda ()
             ;; _で<-を挿入する機能を無効にする。
             ;; 2019-12-24
@@ -47,4 +47,4 @@
             (keymap-set inferior-ess-mode-map "M-?" nil)
             ;; C-c C-iはdeprecatedだしhippie-expandに使っているので無効にする。
             ;; 2019-12-25
-            (keymap-set inferior-ess-mode-map "C-c C-i" nil)))
+            (keymap-set inferior-ess-mode-map "C-c C-i" nil)))))

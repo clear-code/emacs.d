@@ -1,4 +1,4 @@
-;;; Copyright (C) 2012  Kouhei Sutou <kou@clear-code.com>
+;;; Copyright (C) 2012-2025  Sutou Kouhei <kou@clear-code.com>
 ;;;
 ;;; This program is free software: you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
@@ -17,6 +17,5 @@
 ;;; インクリメンタルに選択範囲を広げる
 ;;; 2012-12-06
 
-(package-ensure-install 'expand-region)
-
-(keymap-set global-map "C-=" 'er/expand-region)
+(use-package expand-region
+  :bind ("C-=" . er/expand-region))

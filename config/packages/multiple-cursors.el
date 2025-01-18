@@ -1,4 +1,4 @@
-;;; Copyright (C) 2012  Kouhei Sutou <kou@clear-code.com>
+;;; Copyright (C) 2012-2025  Sutou Kouhei <kou@clear-code.com>
 ;;;
 ;;; This program is free software: you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
@@ -17,10 +17,8 @@
 ;;; 複数箇所を同時に編集する
 ;;; 2012-12-05
 
-(package-ensure-install 'multiple-cursors)
-
-(keymap-set global-map "C-[ C-M-e" 'mc/edit-lines)
-
-(keymap-set global-map "C-<right>" 'mc/mark-next-like-this)
-(keymap-set global-map "C-<left>" 'mc/mark-previous-like-this)
-(keymap-set global-map "C-<down>" 'mc/mark-all-like-this)
+(use-package multiple-cursors
+  :bind (("C-[ C-M-e" . mc/edit-lines)
+         ("C-<right>" . mc/mark-next-like-this)
+         ("C-<left>" . mc/mark-previous-like-this)
+         ("C-<down>" . mc/mark-all-like-this)))

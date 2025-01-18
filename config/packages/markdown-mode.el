@@ -1,4 +1,4 @@
-;;; Copyright (C) 2012-2019  Sutou Kouhei <kou@clear-code.com>
+;;; Copyright (C) 2012-2025  Sutou Kouhei <kou@clear-code.com>
 ;;;
 ;;; This program is free software: you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
@@ -17,10 +17,10 @@
 ;; Markdown編集用のモード
 ;; 2012-10-15
 
-(package-ensure-install 'markdown-mode)
-
-(add-hook 'markdown-mode-hook
-          (lambda ()
-            ;; デフォルトでインライン画像を表示する
-            ;; 2019-12-25
-            (markdown-toggle-inline-images)))
+(use-package markdown-mode
+  :hook (markdown-mode
+         .
+         (lambda ()
+           ;; デフォルトでインライン画像を表示する
+           ;; 2019-12-25
+           (markdown-toggle-inline-images))))

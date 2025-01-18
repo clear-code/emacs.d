@@ -1,4 +1,4 @@
-;;; Copyright (C) 2020  Sutou Kouhei <kou@clear-code.com>
+;;; Copyright (C) 2020-2025  Sutou Kouhei <kou@clear-code.com>
 ;;;
 ;;; This program is free software: you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
@@ -16,15 +16,15 @@
 ;;; cython-mode
 ;;; 2020-10-23
 
-(package-ensure-install 'cython-mode)
-
-(add-hook 'cython-mode-hook
-          (lambda ()
-            ;; Disable which-function-mode to avoid an infinite loop bug.
-            ;;
-            ;; See also:
-            ;;  * https://github.com/cython/cython/issues/3218
-            ;;  * https://github.com/syl20bnr/spacemacs/issues/12740
-            ;;
-            ;; 2020-10-23
-            (which-function-mode -1)))
+(use-package cython-mode
+  :hook (cython-mode-hook
+         .
+         (lambda ()
+           ;; Disable which-function-mode to avoid an infinite loop bug.
+           ;;
+           ;; See also:
+           ;;  * https://github.com/cython/cython/issues/3218
+           ;;  * https://github.com/syl20bnr/spacemacs/issues/12740
+           ;;
+           ;; 2020-10-23
+           (which-function-mode -1))))

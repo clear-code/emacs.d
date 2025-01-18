@@ -27,6 +27,11 @@
 (load "config/builtins/diff-mode")
 
 
+;;; ruby-mode
+;; 2012-03-15
+(load "config/builtins/ruby-mode")
+
+
 ;;; text-mode
 ;; 2012-03-18
 (load "config/builtins/text-mode")

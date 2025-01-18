@@ -1,4 +1,4 @@
-;;; Copyright (C) 2013  Kouhei Sutou <kou@clear-code.com>
+;;; Copyright (C) 2013-2025  Sutou Kouhei <kou@clear-code.com>
 ;;;
 ;;; This program is free software: you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
@@ -17,27 +17,28 @@
 ;;; 置換対象をプレビューできる
 ;;; 2013-12-31
 
-(package-ensure-install 'anzu)
+(use-package anzu
+  :config
+  ;; デフォルトで有効にする。
+  (global-anzu-mode 1)
 
-;; デフォルトで有効にする。
-(global-anzu-mode 1)
+  ;; モードラインに" Anzu"と表示しない。
+  ;; 2018-01-10
+  (setq anzu-mode-lighter "")
 
-;; モードラインに" Anzu"と表示しない。
-;; 2018-01-10
-(setq anzu-mode-lighter "")
+  ;; ヒット数のカウントを最大値を設定して大量にマッチしても重くならな
+  ;; いようにする。
+  ;; 2018-01-10
+  (setq anzu-search-threshold 1000)
 
-;; ヒット数のカウントを最大値を設定して大量にマッチしても重くならないようにする。
-;; 2018-01-10
-(setq anzu-search-threshold 1000)
+  ;; Migemoサポートを有効にする。
+  ;; 2018-01-10
+  (setq anzu-use-migemo t)
 
-;; Migemoサポートを有効にする。
-;; 2018-01-10
-(setq anzu-use-migemo t)
+  ;; 標準の置換コマンドを置き換える。
+  (keymap-set global-map "M-%"   'anzu-query-replace)
+  (keymap-set global-map "C-M-%" 'anzu-query-replace-regexp)
 
-;; 標準の置換コマンドを置き換える。
-(keymap-set global-map "M-%"   'anzu-query-replace)
-(keymap-set global-map "C-M-%" 'anzu-query-replace-regexp)
-
-;; カーソルのある場所にある単語をカーソルのある範囲内でだけ置換する。
-;; 2018-01-10
-(keymap-set global-map "ESC M-%" 'anzu-query-replace-at-cursor-thing)
+  ;; カーソルのある場所にある単語をカーソルのある範囲内でだけ置換する。
+  ;; 2018-01-10
+  (keymap-set global-map "ESC M-%" 'anzu-query-replace-at-cursor-thing))

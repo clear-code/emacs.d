@@ -1,4 +1,4 @@
-;;; Copyright (C) 2021  Sutou Kouhei <kou@clear-code.com>
+;;; Copyright (C) 2021-2025  Sutou Kouhei <kou@clear-code.com>
 ;;;
 ;;; This program is free software: you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
@@ -16,15 +16,16 @@
 ;;; Org mode
 ;;; 2021-01-29
 
-;;; pandocでPDFを生成する設定
-;;; 2021-01-29
-(package-ensure-install 'ox-pandoc)
-(setq org-pandoc-options-for-latex-pdf '((pdf-engine . "xelatex")))
+(use-package ox-pandoc
+  :config
+  ;; pandocでPDFを生成する設定
+  ;; 2021-01-29
+  (setq org-pandoc-options-for-latex-pdf '((pdf-engine . "xelatex")))
 
-;;; デフォルトで行を折り返す
-;;; 2021-04-06
-(setq org-startup-truncated nil)
+  ;; デフォルトで行を折り返す
+  ;; 2021-04-06
+  (setq org-startup-truncated nil)
 
-;;; デフォルトで展開する
-;;; 2021-04-06
-(setq org-startup-folded nil)
+  ;; デフォルトで展開する
+  ;; 2021-04-06
+  (setq org-startup-folded nil))

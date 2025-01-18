@@ -1,4 +1,4 @@
-;;; Copyright (C) 2014-2021  Sutou Kouhei <kou@clear-code.com>
+;;; Copyright (C) 2014-2025  Sutou Kouhei <kou@clear-code.com>
 ;;;
 ;;; This program is free software: you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
@@ -16,8 +16,9 @@
 ;;; EditorConfig
 ;; 2014-10-22
 
-(package-ensure-install 'editorconfig)
+(use-package editorconfig
+  :config
+  ;; 常に有効にする。
+  ;; 2021-05-19
+  (editorconfig-mode 1))
 
-;; 常に有効にする。
-;; 2021-05-19
-(editorconfig-mode 1)
