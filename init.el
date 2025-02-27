@@ -145,6 +145,9 @@
                          space-after-tab)) ; タブの後にあるスペースを対象とする。
 ;; デフォルトで視覚化を有効にする。
 (global-whitespace-mode 1)
+;; 2025-02-27
+;; デフォルトでスペースでインデントする。
+(setq-default indent-tabs-mode nil)
 
 
 ;;; 位置
