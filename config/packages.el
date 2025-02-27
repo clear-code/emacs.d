@@ -138,11 +138,6 @@
 (load "config/packages/editorconfig")
 
 
-;;; scss-mode
-;; 2014-10-22
-(load "config/packages/scss-mode")
-
-
 ;;; rust-mode
 ;; 2017-03-16
 (use-package rust-mode)
