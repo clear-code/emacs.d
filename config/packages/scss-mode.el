@@ -21,7 +21,7 @@
   ;; 別の仕組みを使ってコンパイルすることが多いので、
   ;; 保存時の自動コンパイルは無効にする。
   (setq scss-compile-at-save nil)
-  :hook (scss-mode-hook
+  :hook (scss-mode
          .
          (lambda ()
            ;; インデントにはスペースを使う。
