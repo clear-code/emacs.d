@@ -253,6 +253,11 @@
 (which-function-mode 1)
 
 
+;;; 次に使えるキーをミニバッファ表示する。
+;; 2025-03-04
+(which-key-mode 1)
+
+
 ;;; Emacsサーバー
 ;; emacsclientで接続できるようにする。
 ;; 2011-06-14
