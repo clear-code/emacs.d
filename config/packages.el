@@ -243,6 +243,11 @@
 (use-package swift-mode)
 
 
+;;; adaptive-wrap
+;; 2025-04-30
+(load "config/packages/adaptive-wrap")
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-15
