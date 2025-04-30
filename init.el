@@ -276,6 +276,22 @@
 (setq native-comp-async-report-warnings-errors 'silent)
 
 
+;;; 長い行の折り返し
+;; 長い行が見た目上折り返しているとき、見た目通りの行で移動する
+;; 2025-04-30
+(global-visual-line-mode 1)
+;; 折り返されている行の両端に矢印を表示する
+;; 2025-04-30
+(setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
+;; いい感じの空白で折り返す
+;; 2025-04-30
+(global-word-wrap-whitespace-mode 1)
+;; 折り返されている行にもいい感じに見かけ上のインデントをつけしたりコ
+;; メントマークをつけたりする
+;; 2025-04-30
+(global-visual-wrap-prefix-mode 1)
+
+
 ;;; 追加の設定
 ;; 標準Elispの設定
 (load "config/builtins")
