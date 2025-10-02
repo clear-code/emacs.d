@@ -242,6 +242,18 @@
 ;; 2024-01-10
 (use-package swift-mode)
 
+;;; gptel
+;; 2025-10-02
+(use-package gptel
+  :config
+  (setq gptel-model 'llama-cpp-model)
+  (setq gptel-backend (gptel-make-openai "llama-cpp"
+                        :stream t
+                        :protocol "http"
+                        :host "localhost:8080"
+                        :models '(llama-cpp-model)))
+  :bind (("C-c C-l" . gptel-menu)))
+
 
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
