@@ -261,6 +261,11 @@
 (use-package julia-mode)
 
 
+;;; Salt-mode
+;; 2026-08-21
+(use-package salt-mode)
+
+
 ;;; 追加の設定
 ;; 個別の設定があったら読み込む
 ;; 2012-03-15
