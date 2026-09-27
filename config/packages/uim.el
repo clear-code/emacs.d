@@ -29,3 +29,8 @@
 (setq uim-candidate-display-frame t)
 (setq uim-candidate-display-inline t)
 (keymap-set global-map "C-o" 'uim-mode-force-on)
+
+;; WaylandではGTK経由での日本語入力を無効にする。
+;; 2026-09-27
+(if (eq window-system 'pgtk)
+    (setq pgtk-use-im-context-on-new-connection nil))
