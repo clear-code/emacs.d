@@ -4,7 +4,9 @@
 
 ## 使い方
 
-        % git clone https://github.com/clear-code/emacs.d.git ~/.emacs.d
+```console
+% git clone https://github.com/clear-code/emacs.d.git ~/.emacs.d
+```
 
 # カスタマイズ
 
