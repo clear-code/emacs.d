@@ -33,6 +33,35 @@
 
 ~/.emacs.d/config/el-get/local-recipes/以下に拡張子がrcpのel-get用レシピファイルを置くと自動で読み込まれます。
 
+### gptel
+
+gptelを使うときは、カスタマイズ用のファイルでバックエンドを作る関数を指定してから~/.emacs.d/config/packages/gptel.elを読み込みます。関数の中で`gptel-make-openai`・`gptel-make-ollama`・`gptel-make-anthropic`などを呼んでバックエンドを返してください。この関数はgptelを読み込んだ後に呼ばれます。バックエンドの最初のモデルを使います。
+
+例: llama.cppのサーバーを使う場合
+
+```elisp
+(setq local-gptel-make-backend
+      (lambda ()
+        (gptel-make-openai "llama-cpp"
+          :stream t
+          :protocol "http"
+          :host "localhost:8080"
+          :models '(llama-cpp-model))))
+(load "config/packages/gptel")
+```
+
+例: Ollamaを使う場合
+
+```elisp
+(setq local-gptel-make-backend
+      (lambda ()
+        (gptel-make-ollama "Ollama"
+          :stream t
+          :host "localhost:11434"
+          :models '(gemma3:latest))))
+(load "config/packages/gptel")
+```
+
 ## 全体のカスタマイズ
 
 ~/.emacs.d/config/local.elに設定を書くと自動で読み込まれます。

@@ -243,19 +243,6 @@
 (use-package swift-mode)
 
 
-;;; gptel
-;; 2025-10-02
-(use-package gptel
-  :config
-  (setq gptel-model 'llama-cpp-model)
-  (setq gptel-backend (gptel-make-openai "llama-cpp"
-                        :stream t
-                        :protocol "http"
-                        :host "localhost:8080"
-                        :models '(llama-cpp-model)))
-  :bind (("C-c C-l" . gptel-menu)))
-
-
 ;;; Julia mode
 ;; 2026-07-13
 (use-package julia-mode)
