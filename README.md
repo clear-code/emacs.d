@@ -64,6 +64,19 @@ gptelを使うときは、カスタマイズ用のファイルでバックエン
 (load "config/packages/gptel")
 ```
 
+#### MCP
+
+~/.emacs.d/config/packages/gptel.elの後に~/.emacs.d/config/packages/mcp.elを読み込むと、gptelから`mcp-hub-servers`で指定したMCPサーバーのツールを使えます。ツール呼び出しに対応したモデルが必要です。
+
+例: [Parallel](https://parallel.ai/)の無料のWeb検索を使う場合
+
+```elisp
+(load "config/packages/gptel")
+(setq mcp-hub-servers
+      '(("parallel-search" :url "https://search.parallel.ai/mcp")))
+(load "config/packages/mcp")
+```
+
 ### 全体のカスタマイズ
 
 ~/.emacs.d/config/local.elに設定を書くと自動で読み込まれます。

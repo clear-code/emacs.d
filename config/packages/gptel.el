@@ -75,24 +75,26 @@ Output only the translation."
       ;; qで元のウィンドウに戻れるようにする
       (special-mode))
     (pop-to-buffer buffer)
-    (gptel-request string
-      :buffer buffer
-      :stream t
-      :system (format translate-system-prompt translate-target-language)
-      :callback
-      (lambda (response info)
-        (with-current-buffer (plist-get info :buffer)
-          (let ((inhibit-read-only t))
-            (save-excursion
-              (goto-char (point-max))
-              (cond
-               ((stringp response)
-                (insert response))
-               ((eq response t)
-                (message "Translated"))
-               ((null response)
-                (insert (format "\n[翻訳失敗: %s]\n"
-                                (plist-get info :status))))))))))))
+    ;; 翻訳ではWeb検索などのツールを使わない
+    (let ((gptel-use-tools nil))
+      (gptel-request string
+        :buffer buffer
+        :stream t
+        :system (format translate-system-prompt translate-target-language)
+        :callback
+        (lambda (response info)
+          (with-current-buffer (plist-get info :buffer)
+            (let ((inhibit-read-only t))
+              (save-excursion
+                (goto-char (point-max))
+                (cond
+                 ((stringp response)
+                  (insert response))
+                 ((eq response t)
+                  (message "Translated"))
+                 ((null response)
+                  (insert (format "\n[翻訳失敗: %s]\n"
+                                  (plist-get info :status)))))))))))))
 
 (defun translate-region (start end)
   "リージョンをgptelで翻訳して別バッファーに表示する。"
