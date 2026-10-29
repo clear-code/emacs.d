@@ -292,6 +292,15 @@
 (global-visual-wrap-prefix-mode 1)
 
 
+;;; URL
+;; C-c RETで開けるようにする。
+;; 2026-10-29
+(global-goto-address-mode 1)
+;; C-u C-c RETでEmacs内で開けるようにする。
+;; 2026-10-29
+(setq browse-url-secondary-browser-function #'eww-browse-url)
+
+
 ;;; 追加の設定
 ;; 標準Elispの設定
 (load "config/builtins")
