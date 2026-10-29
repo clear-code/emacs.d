@@ -99,4 +99,4 @@ Output only the translation."
   (interactive "r")
   (translate-string (buffer-substring-no-properties start end)))
 
-(keymap-set global-map "C-c C-t" 'translate-region)
+(keymap-set global-map "C-c C-t" #'translate-region)

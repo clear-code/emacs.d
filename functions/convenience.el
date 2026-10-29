@@ -29,7 +29,7 @@
 ;; 含まれていなかったらdirectoryの親のディレクトリを再帰的に探す。
 ;; 2011-03-19
 (defun find-path-in-parents (directory base-names)
-  (or (find-if 'file-exists-p
+  (or (find-if #'file-exists-p
                (mapcar (lambda (base-name)
                          (concat directory base-name))
                        base-names))

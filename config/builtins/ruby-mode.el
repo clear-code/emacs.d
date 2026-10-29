@@ -48,4 +48,4 @@
 
             ;; C-c C-eで「end」を挿入する
             ;; 2014-10-28
-            (keymap-set ruby-mode-map "C-C C-e" 'ruby-insert-end)))
+            (keymap-set ruby-mode-map "C-C C-e" #'ruby-insert-end)))

@@ -40,8 +40,8 @@
 
 ;; Summaryモード・Messageモードで"T"を押すと翻訳する
 (defun mew-enable-translate-message ()
-  (keymap-set mew-summary-mode-map "T" 'mew-translate-message)
-  (keymap-set mew-message-mode-map "T" 'mew-translate-message))
+  (keymap-set mew-summary-mode-map "T" #'mew-translate-message)
+  (keymap-set mew-message-mode-map "T" #'mew-translate-message))
 
 (with-eval-after-load 'mew-key
   (mew-enable-translate-message))

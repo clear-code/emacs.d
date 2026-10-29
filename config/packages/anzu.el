@@ -36,9 +36,9 @@
   (setq anzu-use-migemo t)
 
   ;; 標準の置換コマンドを置き換える。
-  (keymap-set global-map "M-%"   'anzu-query-replace)
-  (keymap-set global-map "C-M-%" 'anzu-query-replace-regexp)
+  (keymap-set global-map "M-%"   #'anzu-query-replace)
+  (keymap-set global-map "C-M-%" #'anzu-query-replace-regexp)
 
   ;; カーソルのある場所にある単語をカーソルのある範囲内でだけ置換する。
   ;; 2018-01-10
-  (keymap-set global-map "ESC M-%" 'anzu-query-replace-at-cursor-thing))
+  (keymap-set global-map "ESC M-%" #'anzu-query-replace-at-cursor-thing))

@@ -37,7 +37,7 @@
 (defun magit-enable-insert-commit-message-from-history ()
   ;; 過去のコミットメッセージを挿入
   (keymap-set git-commit-mode-map
-    "C-c i" 'magit-insert-commit-message-from-history))
+    "C-c i" #'magit-insert-commit-message-from-history))
 
 ;; diff関連の設定
 ;; 2012-04-02

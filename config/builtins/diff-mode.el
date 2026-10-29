@@ -33,4 +33,4 @@
   (set-face-attribute 'diff-refine-changed nil
                       :foreground nil :background nil
                       :weight 'bold :inverse-video t))
-(add-hook 'diff-mode-hook 'diff-mode-setup-faces)
+(add-hook 'diff-mode-hook #'diff-mode-setup-faces)

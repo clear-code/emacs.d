@@ -25,13 +25,13 @@
 ;; 2013-12-19
 (mapc
  (lambda (hook)
-   (add-hook hook 'flyspell-mode))
+   (add-hook hook #'flyspell-mode))
  '(text-mode-hook))
 ;; プログラムを書いているときはコメントの中でだけ自動スペルチェック機能を有効にする
 ;; 2013-12-19
 (mapc
  (lambda (hook)
-   (add-hook hook 'flyspell-prog-mode))
+   (add-hook hook #'flyspell-prog-mode))
  '(prog-mode-hook
    ruby-mode-hook))
 

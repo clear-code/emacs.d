@@ -64,8 +64,8 @@
   :hook (auto-complete-mode
          .
          (lambda ()
-           (keymap-set ac-completing-map "C-n" 'ac-next)
-           (keymap-set ac-completing-map "C-p" 'ac-previous))))
+           (keymap-set ac-completing-map "C-n" #'ac-next)
+           (keymap-set ac-completing-map "C-p" #'ac-previous))))
 
 
 ;;; Migemo
